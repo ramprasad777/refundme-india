@@ -1,0 +1,57 @@
+@import 'animations';
+
+a, .btn, .paymentType label, .donationAmount label{-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out; -ms-transition: all 0.25s ease-in-out; -o-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out;}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size:18px;
+  line-height: 24px;
+  margin-bottom:20px!important;
+}
+.heightlightedText{
+  color:#f47822;
+}
+.carousel{
+  margin-bottom:0!important;
+}
+.top-buffer {
+	margin-top:20px;
+}
+.bodyContainer{
+  text-align: center;
+  .container{
+    padding:40px 20px;
+  }
+  .mainHeading{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    position: relative;
+    padding:0 0 15px;
+    margin-bottom:40px;
+    &:after{
+      content:'';
+      width:150px;
+      height:5px;
+      background:#f47822;
+      position:absolute;
+      left:0;right:0; bottom:0; margin:auto;
+    }
+  }
+}
+
+//Start Main Navigation
+.mainNavigation{
+  background:#fff;
+  @include box-shadow(0px, 2px, 5px, 0px, rgba(0, 0, 0, 0.2));
+  padding:20px 0;
+}
