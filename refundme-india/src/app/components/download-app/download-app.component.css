@@ -1,0 +1,121 @@
+.downloadAppSection .downloadAppBlock{
+	border:1px solid #efeeee;
+}
+.downloadAppIcons{
+	text-align: center;
+}
+.downloadAppSection .app-btn {
+    text-align: center;
+    padding: 15px;
+    background: #000;
+    margin: 15px 16px 15px 0;
+    display:inline-block;
+}
+.downloadAppSection .or-seprate {
+    font-size: 1.71429em;
+    float: left;
+    width: 32px;
+    height: 105px;
+    border-left: 1px solid #e5e5e5;
+    position: relative;
+    margin-left: 20px;
+    display: none;
+}
+.downloadAppSection .or-seprate span {
+    position: absolute;
+    left: -22px;
+    top: 30px;
+    background: #fff;
+    padding: 5px 0;
+    color: #8a8a8a;
+}
+.downloadAppSection .rgt-block {
+    display: table-cell;
+    width: 1%;
+}
+.downloadAppSection .rgt-block ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+.downloadAppSection .rgt-block li {
+    margin: 5px 0 10px;
+    width: 100%;
+    list-style: none;
+    text-align:left;
+}
+.downloadAppSection .input-mobile-no {
+    width: 70%;
+    float:left;
+    position: relative;
+}
+.downloadAppSection .input-mobile-no .country-code {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+.downloadAppSection .input-mobile-no input {
+    width: 100%;
+}
+.downloadAppSection .input-mobile-no input[type=tel] {
+    padding: 10px 10px 10px 50px;
+    border: 1px solid #c2c2c2;
+    padding:13px 10px 13px 40px;
+    font-size: 1.07143em;
+    letter-spacing: 1px;
+    background: #fff;
+}
+.downloadAppSection .mob-submit-btn {
+    font-size: 100%;
+    text-align: center;
+    width: 30%;
+    padding: 5px 10px;
+    margin:0;
+    line-height: 35px;
+    white-space: nowrap;
+}
+.downloadAppThumbnail{
+	margin-top:50px;
+}
+.downloadAppThumbnail .description h4{
+	font-size:180%;
+	margin-top:20px;
+	color:#fff;
+	text-transform: uppercase;
+}
+.downloadAppThumbnail .description h4 span{
+	display: block;
+	margin-top:20px;
+}
+.downloadAppThumbnail .thumbnail{
+	border:none;
+	border-radius: 0;
+}
+.wildlifeSpecies, .arcticExperiences, .nationalParks, .daysWild{
+	padding:70px 20px;
+	text-align:center;
+	display: grid;
+	align-items: center;
+}
+.downloadAppThumbnail .wildlifeSpecies{
+	background: #5b5da8;
+}
+.downloadAppThumbnail .arcticExperiences{
+	background: #f68f40;
+}
+.downloadAppThumbnail .nationalParks{
+	background: #78c597;
+}
+.downloadAppThumbnail .daysWild{
+	background: #0eadca;
+}
+@media only screen and (min-width:1200px){
+	.downloadAppSection .downloadAppBlock{
+		border:1px solid #efeeee;
+		display: flex;
+		align-items: center;
+	}
+	.or-seprate{
+		display: block!important;
+	}
+}

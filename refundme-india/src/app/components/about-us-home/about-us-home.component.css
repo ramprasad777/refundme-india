@@ -1,0 +1,44 @@
+.homeAboutSection{
+	background:url('/assets/images/about-bg.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+.thumbnailBlock a{
+	display: block;
+}
+.thumbnailBlock .img-thumbnail{
+	background: transparent;
+	border:none;
+	padding:0;
+	border-radius: 0;
+}
+.mb-4, .my-4 {
+  margin-bottom: 2.5rem!important;
+}
+.mrBoieSection{
+	position:relative;
+	display: flex;
+    align-items: center;
+}
+.mrBoie{
+	
+}
+.mrBoie img{
+	width:100%;
+}
+.mrBoieDescription{
+	
+}
+@media only screen and (min-width:768px){
+	.mrBoie{
+		position: absolute;
+		top:-100px;
+		right:0;
+	}
+	.mrBoieDescription{
+		position: relative; top: 200px; left:50px;
+	}
+}

@@ -1,3 +1,9 @@
+.servicesIcon {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */ }
+
 .vibrate {
   animation: vibrate 5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
@@ -29,6 +35,101 @@
   100% {
     transform: scale(0.75); } }
 
+.icons {
+  background-image: url(/assets/images/sprite-icons.png); }
+
+.clockIconLarge, .delayPrediction, .claimCompensation, .airportAssitance, .manageTrip, .cabServices, .airlineAssistance, .baggageInformationIcon, .expanseTrackerIcon, .weatherForecastIcon, .wildlifeSpeciesIcon, .arcticExperiencesIcon, .nationalParksIcon, .daysWildIcon {
+  margin: 0 auto;
+  display: block; }
+
+.enquiryFormIcon {
+  width: 25px;
+  height: 25px;
+  float: right;
+  position: relative; }
+
+.depatureAirport {
+  background-position: 0 0; }
+
+.arrivalAirport {
+  background-position: 0px -24px; }
+
+.flightNumber {
+  background-position: 0px 0; }
+
+.depatureDate {
+  background-position: 0px -52px; }
+
+.clockIconLarge {
+  background-position: 103px 0;
+  width: 103px;
+  height: 104px; }
+
+.delayPrediction {
+  background-position: 1px -77px;
+  width: 48px;
+  height: 42px; }
+
+.claimCompensation {
+  background-position: 0px -120px;
+  width: 52px;
+  height: 42px; }
+
+.airportAssitance {
+  background-position: 0px -162px;
+  width: 48px;
+  height: 42px; }
+
+.manageTrip {
+  background-position: 0px -205px;
+  width: 48px;
+  height: 42px; }
+
+.cabServices {
+  background-position: 0px -249px;
+  width: 48px;
+  height: 42px; }
+
+.airlineAssistance {
+  background-position: 0px -292px;
+  width: 52px;
+  height: 42px; }
+
+.baggageInformationIcon {
+  background-position: 0px -334px;
+  width: 52px;
+  height: 48px; }
+
+.expanseTrackerIcon {
+  background-position: -48px -1px;
+  width: 52px;
+  height: 44px; }
+
+.weatherForecastIcon {
+  background-position: -48px -49px;
+  width: 52px;
+  height: 44px; }
+
+.wildlifeSpeciesIcon {
+  background-position: -121px -106px;
+  width: 79px;
+  height: 64px; }
+
+.arcticExperiencesIcon {
+  background-position: -121px -171px;
+  width: 79px;
+  height: 64px; }
+
+.nationalParksIcon {
+  background-position: -121px -236px;
+  width: 79px;
+  height: 64px; }
+
+.daysWildIcon {
+  background-position: -121px -310px;
+  width: 79px;
+  height: 64px; }
+
 a, .btn, .paymentType label, .donationAmount label {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -42,7 +143,7 @@ html, body {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #333;
   background-color: #fff; }
@@ -53,35 +154,132 @@ p {
   line-height: 24px;
   margin-bottom: 20px !important; }
 
+.navbar-toggle .icon-bar {
+  background-color: #ccc; }
+
 .heightlightedText {
   color: #f47822; }
-
-.carousel {
-  margin-bottom: 0 !important; }
 
 .top-buffer {
   margin-top: 20px; }
 
+.mainSections {
+  padding: 50px 0 100px; }
+
 .bodyContainer {
   text-align: center; }
   .bodyContainer .container {
-    padding: 40px 20px; }
+    padding: 0 20px; }
   .bodyContainer .mainHeading {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 900;
+    font-weight: 500;
     position: relative;
     padding: 0 0 15px;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    text-transform: uppercase; }
     .bodyContainer .mainHeading:after {
       content: '';
       width: 150px;
-      height: 5px;
-      background: #f47822;
+      height: 1px;
+      background: #adabab;
       position: absolute;
       left: 0;
       right: 0;
       bottom: 0;
       margin: auto; }
+  .bodyContainer .mainHeading2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    position: relative;
+    padding: 0 0 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase; }
+    .bodyContainer .mainHeading2 span {
+      display: block;
+      text-transform: capitalize;
+      font-size: 60%;
+      margin-top: 20px; }
+      .bodyContainer .mainHeading2 span:after {
+        content: '';
+        width: auto;
+        max-width: 20%;
+        height: 4px;
+        background: #adabab;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto; }
+    .bodyContainer .mainHeading2:after {
+      content: '';
+      width: auto;
+      max-width: 70%;
+      height: 1px;
+      background: #adabab;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+
+.mainBtn, .mainBtnWhite {
+  height: auto;
+  width: auto;
+  padding: 15px 50px;
+  margin: 20px auto;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 150%;
+  box-shadow: 0 0 1px #ccc;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  box-shadow: 0px 0 0 #31708f  inset; }
+
+.mainBtn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff; }
+
+.mainBtn:hover {
+  box-shadow: 200px 0 0 #31708f inset;
+  border: 1px solid #31708f;
+  text-decoration: none;
+  color: #fff; }
+
+.mainBtnWhite {
+  background: #f1f1f1;
+  color: #787878;
+  border: 2px solid #7f7f7f; }
+
+.mainBtnWhite:hover {
+  box-shadow: 500px 0 0 #31708f inset;
+  border: 2px solid #31708f;
+  text-decoration: none;
+  color: #fff; }
+
+.section {
+  padding: 30px 20px; }
+  .section h2 {
+    color: #323232; }
+
+.skewedContentBlock .container {
+  padding: 0 20px 70px; }
+
+.skewedContentBlock .skewedBox {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 50px 80px 50px 50px;
+  transform: skew(-10deg, 0deg) translateY(0);
+  display: flex;
+  align-items: center; }
+  .skewedContentBlock .skewedBox .form {
+    padding: 50px 20px;
+    transform: skew(10deg, 0deg);
+    font-family: arial;
+    width: 100%;
+    max-width: 600px; }
+  .skewedContentBlock .skewedBox .subHeadingInnerPage {
+    padding: 0;
+    color: #f47822; }
 
 .mainNavigation {
   background: #fff;
@@ -89,3 +287,13 @@ p {
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
   padding: 20px 0; }
+
+@media only screen and (min-width: 1200px) {
+  .skewedBox {
+    min-height: 730px; }
+  .skewedContentBlock {
+    position: absolute !important;
+    right: -80px;
+    top: 0; }
+  section .container, nav .container {
+    width: 1440px; } }

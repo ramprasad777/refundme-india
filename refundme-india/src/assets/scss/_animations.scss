@@ -9,8 +9,10 @@
   border-radius: $radius;
   background-clip: padding-box;  /* stops bg color from leaking outside the border: */
 }
-$skewed-bg-color: #e8eff9;
-
+$skewed-bg-color: rgba(0,0,0,.2);
+.servicesIcon{
+  @include border-radius(50%);
+}
 .vibrate {
   animation: vibrate 5s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);

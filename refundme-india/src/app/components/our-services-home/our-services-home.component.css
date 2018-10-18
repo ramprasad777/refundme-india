@@ -1,0 +1,60 @@
+.ourServicesSection{
+	background:url('/assets/images/our-services-bg.jpg') no-repeat center center fixed;
+	 -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.ourServices{
+	font-size:90%;
+	text-align:center;
+}
+.ourServices .discription h4{
+	font-size:150%;
+	color:#000;
+	font-weight: 700;
+}
+.ourServices .discription h4 span{
+	display: block;
+	font-size:80%;
+	color:#7f7f7f;
+	font-style: italic;
+	margin-top:10px;
+}
+.servicesIcon{
+	width:91px;
+	height:91px;
+	display: flex;
+	align-items: center;
+	margin:0 auto;
+}
+.discription{
+	text-align:center;
+	padding-left:20px;
+}
+.delayForcast{
+	background:#252525;
+}
+.cabServicesBg, .journeyChecklist, .baggageInformation{
+	background:#5b5da8;
+}
+.assistanceServices, .expenseTracker{
+	background:#f68f40;
+}
+.aboutAirport{
+	background:#78c597;
+}
+.journeyChecklist, .weatherForecast{
+	background:#0eadca;
+}
+.preBookMeal{
+	background:#f17776;
+}
+@media only screen and (min-width:768px){
+	.discription{
+		text-align:left!important;
+	}
+	.ourServices{
+		padding:50px 0;
+	}
+}

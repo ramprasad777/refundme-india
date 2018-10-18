@@ -1,51 +1,38 @@
-
-  
-  <!-- Full Page Image Background Carousel Header -->
-  <div id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://www.marchettidesign.net/demo/optimized-bootstrap/code.jpg');"></div>
-                <div class="carousel-caption">
-                     <h2 class="animated fadeInLeft">Special Assistance Services</h2>
-                     <p class="animated fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                     <p class="animated fadeInUp"><a href="#" class="btn btn-transparent btn-rounded btn-large">Know More</a></p>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://www.marchettidesign.net/demo/optimized-bootstrap/conference.jpg');"></div>
-                <div class="carousel-caption">
-                     <h2 class="animated fadeInDown">Caption Animation</h2>
-                     <p class="animated fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                     <p class="animated fadeInUp"><a href="#" class="btn btn-transparent btn-rounded btn-large">Learn More</a></p>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://www.marchettidesign.net/demo/optimized-bootstrap/campus.jpg');"></div>
-                <div class="carousel-caption">
-                     <h2 class="animated fadeInRight">Caption Animation</h2>
-                     <p class="animated fadeInRight">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                     <p class="animated fadeInRight"><a href="#" class="btn btn-transparent btn-rounded btn-large">Learn More</a></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-
-    </div>
+<section class="mainSections section bannerContainer">
+	<div class="container">
+		<h2>Thinking of Flying, Think of refundme.in </h2>
+		<div class="col-xs-12 col-sm-12 col-lg-7">
+			<div class="descriptionContent">
+				<span class="icons clockIconLarge"></span>
+				<h3>Special Assistance Services</h3>
+				<p>Being a designer goes a step further than trying to evoke emotion, it’s trying to make a reaction.</p>
+				<a href="#" class="mainBtn">Submit</a>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-lg-5 skewedContentBlock">
+			<div class="enquiryForm skewedBox">
+				<div class="form">
+					<form class="form-label form-css-label">
+					    <fieldset>
+					      <input id="departureAirport" name="departureAirport" type="text" autocomplete="off" required />
+					      <label for="departureAirport">Departure Airport <span class="icons enquiryFormIcon depatureAirport"></span></label>
+					    </fieldset>
+					    <fieldset>
+					      <input id="arrivalAirport" name="arrivalAirport" type="text" autocomplete="off" required />
+					      <label for="arrivalAirport">Arrival Airport <span class="icons enquiryFormIcon arrivalAirport"></span></label>
+					    </fieldset>
+					    <fieldset>
+					      <input id="flightNumber" name="flightNumber" type="text" autocomplete="off" required />
+					      <label for="flightNumber">Flight no <span class="icons enquiryFormIcon flightNumber"></span></label>
+					    </fieldset>
+					    <fieldset>
+					      <input id="date" name="date" type="date" autocomplete="off" required />
+					      <label for="date">Date <span class="icons enquiryFormIcon depatureDate"></span></label>
+					    </fieldset>
+					    <button type="submit" class="mainBtn">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
