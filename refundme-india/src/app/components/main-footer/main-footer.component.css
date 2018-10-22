@@ -1,14 +1,13 @@
 .mainFooterTabsSection{
 	background:#20313f;
 	padding:0;
+	border-top:5px solid rgba(33,33,33,.6);
 }
 ul.tabs {
 	margin: 0;
 	padding: 0;
 	float: left;
 	list-style: none;
-	height: 32px;
-	border-bottom: 1px solid #333;
 	width: 100%;
 }
 
@@ -16,14 +15,11 @@ ul.tabs li {
 	float: left;
 	margin: 0;
 	cursor: pointer;
-	padding: 0px 21px;
-	height: 31px;
-	line-height: 31px;
+	font-size:160%;
+	padding: 20px 40px;
 	border-top: 1px solid #333;
-	border-left: 1px solid #333;
-	border-bottom: 1px solid #333;
-	background-color: #666;
 	color: #ccc;
+	text-transform: uppercase;
 	overflow: hidden;
 	position: relative;
 }
@@ -38,7 +34,7 @@ ul.tabs li:hover {
 ul.tabs li.active {
 	background-color: #3a4b5a;
 	color: #fff;
-	border-bottom: 1px solid #3a4b5a;
+	border-bottom: none;
 	display: block;
 }
 
@@ -58,15 +54,56 @@ ul.tabs li.active {
 	padding: 20px;
 	display: none;
 }
-
+.footer1 h1{
+	font-size:150%;
+	margin-bottom:20px;
+}
+.footer1 ul ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.footer1 ul ul a{
+	padding:15px 0;
+	display: block;
+	font-size:130%;
+	color:#707070;
+}
+.footer1 ul ul a:hover{
+	color:#fff;
+}
+.footer-bottom{
+	color:#fff;
+	padding:20px 0;
+	font-size:130%;
+	border-bottom:2px solid #3a4b5a;
+}
+.footer-bottom ul{
+	list-style: none;
+	margin:0;
+	padding: 0;
+	display: inline;
+}
+.footer-bottom ul li{
+	display: inline-block;
+}
+.footer-bottom ul li:before{
+	content:' | ';
+	margin:0;
+	padding:0;
+}
+.footer-bottom ul li a{
+	color:#fff;
+	padding:0 15px;
+}
 .tab_drawer_heading { display: none; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1200px) {
 	.tabs {
 		display: none;
 	}
 	.tab_drawer_heading {
-		background-color: #ccc;
+		background-color:none;
 		color: #fff;
 		border-top: 1px solid #333;
 		margin: 0;
@@ -81,7 +118,26 @@ ul.tabs li.active {
 		user-select: none;
 	}
 	.d_active {
-		background-color: #666;
+		background-color: #556d82;
 		color: #fff;
+	}
+}
+/* Bootstrap Fixes */
+@media (min-width: 768px) {
+	.ten-columns > .col-lg-3 {
+		width: 20%;
+	}
+}
+
+/* Decorations */
+.ten-columns > .col-lg-3 {
+  	color: #fff;
+  	min-height: 150px; 
+  	padding-top: 6px; 
+}
+
+@media only screen and (max-width:1200px){
+	.tab_content {
+		padding:0 20px;
 	}
 }

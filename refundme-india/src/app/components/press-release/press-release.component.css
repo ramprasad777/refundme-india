@@ -10,3 +10,19 @@
 .thumbnail img{
 	width:100%;
 }
+@media only screen and (max-width:1199px){
+	.pressRleaseThumbnailBlock{
+		overflow: scroll;
+		width:100%;
+	}
+	.thumbnail{
+		min-height: auto;
+	}
+	.pressRleaseThumbnail{
+		overflow: scroll;
+		width:max-content;
+	}
+	.pressRleaseThumbnail [class^=col-]{
+		width:auto;
+	}
+}

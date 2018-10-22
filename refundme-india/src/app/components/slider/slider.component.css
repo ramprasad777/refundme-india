@@ -11,8 +11,6 @@
 }
 .bannerContainer h2{
   color:#fff;
-  position:absolute;
-  left:0;right:0;top:50px;
   margin: auto;
 }
 .bannerContainer input{
@@ -23,6 +21,7 @@
 .descriptionContent{
   color:#fff;
   margin-top:50px;
+  margin-bottom:20px;
 }
 .descriptionContent h3{
   text-transform: uppercase;
@@ -92,4 +91,14 @@ input {
 }
 .enquiryForm input[type=date]:invalid::-webkit-datetime-edit {
     visibility: hidden;
+}
+
+@media only screen and (min-width:1199px){
+  .bannerContainer h2{
+    position:absolute;
+    left:0;right:0;top:50px;
+  }
+  .descriptionContent{
+    margin-bottom:0;
+  }
 }

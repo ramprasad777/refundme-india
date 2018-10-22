@@ -1,5 +1,6 @@
 @import 'animations';
 @import 'icons';
+@import 'fonts';
 
 a, .btn, .paymentType label, .donationAmount label{-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out; -ms-transition: all 0.25s ease-in-out; -o-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out;}
 html, body {
@@ -7,17 +8,23 @@ html, body {
     overflow-x: hidden;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Titillium-Web-Regular', sans-serif;
     font-size: 16px;
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
 }
 p{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Titillium-Web-Regular', sans-serif;
   font-size:18px;
   line-height: 24px;
   margin-bottom:20px!important;
+}
+.bannerContainer, .sliderServicesSection, .ourServices, .mainBtn, .mainBtnWhite, .enquiryForm input{
+  font-family:'Titillium-Web-Regular', sans-serif;
+}
+.enquiryForm label{
+  font-family:'Titillium-Web-Thin', sans-serif;
 }
 .navbar-toggle .icon-bar{
   background-color:#ccc;
@@ -37,8 +44,9 @@ p{
     padding:0 20px;
   }
   .mainHeading{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Titillium-Web-Regular', sans-serif;
     font-weight: 500;
+    font-size:300%;
     position: relative;
     padding:0 0 15px;
     margin-bottom:40px;
@@ -53,10 +61,11 @@ p{
     }
   }
   .mainHeading2{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Titillium-Web-Regular', sans-serif;
     font-weight: 500;
     position: relative;
     padding:0 0 20px;
+    font-size:300%;
     margin-bottom:40px;
     text-transform:uppercase;
     span{
@@ -89,8 +98,9 @@ p{
 .mainBtn, .mainBtnWhite{
   height: auto;
   width: auto;
-  padding:15px 50px;
+  padding:10px 50px;
   margin: 20px auto;
+  display:inline-block;
   white-space:nowrap;
   overflow:hidden;
   font-size:150%;
@@ -106,7 +116,7 @@ p{
 }
 .mainBtn:hover{
     box-shadow:200px 0 0 #31708f inset;
-    border:1px solid #31708f;
+    //border:1px solid #31708f;
     text-decoration:none;
     color:#fff;
 }
@@ -161,6 +171,11 @@ p{
   @include box-shadow(0px, 2px, 5px, 0px, rgba(0, 0, 0, 0.2));
   padding:20px 0;
 }
+.mainNavigation li a{
+  font-family:'Titillium-Web-Regular';
+  color:#5d5c5c;
+  font-size:150%;
+}
 
 
 @media only screen and (min-width:1200px){
@@ -174,5 +189,42 @@ p{
   }
   section .container, nav .container{
     width:1440px;
+  }
+}
+@media only screen and (max-width:1199px){
+  .skewedContentBlock{
+    margin-top:20px;
+  }
+  .skewedContentBlock .skewedBox{
+    transform: skew(0deg, 0deg) translateY(0);
+    padding:20px;
+  }
+  .skewedContentBlock .skewedBox .form{
+    padding: 20px;
+    transform: skew(0, 0deg);
+    max-width:inherit;
+  }
+  .mainFooterTabsSection .footer1, .mainFooterSection .footer1{
+    overflow:scroll;
+    width:100%;
+  }
+  .ten-columns{
+    width:max-content;
+  }
+  .ten-columns [class^=col-]{
+    width:20%;
+    float:left;
+  }
+  .mainFooterSection .footer1{
+    padding:0 50px;
+  }
+  .mainFooterSection .footer1 .ten-columns .col-lg-7{
+    width:auto;
+    max-width:50%;
+  }
+  .copyRightContent{
+    display:block;
+    text-align:center;
+    margin-top:20px;
   }
 }

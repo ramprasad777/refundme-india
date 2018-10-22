@@ -15,17 +15,21 @@
 }
 
 .home-newsletter .single {
-	max-width: 650px;
+	max-width: 750px;
 	margin: 0 auto;
 	text-align: center;
 	position: relative;
 	z-index: 2;
 }
 .home-newsletter .single h2 {
-	font-size: 22px;
+	font-size: 220%;
 	color: white;
+	letter-spacing: 5px;
 	text-transform: uppercase;
 	margin-bottom: 40px;
+}
+.home-newsletter .single h2 span{
+	letter-spacing: 0;
 }
 .home-newsletter .single .form-control {
 	height: 50px;

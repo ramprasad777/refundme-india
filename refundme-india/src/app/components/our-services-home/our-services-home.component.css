@@ -9,10 +9,14 @@
 	font-size:90%;
 	text-align:center;
 }
+.ourServices:nth-child(3n+4){
+	clear:left;
+}
 .ourServices .discription h4{
 	font-size:150%;
 	color:#000;
 	font-weight: 700;
+	margin-top:0;
 }
 .ourServices .discription h4 span{
 	display: block;
