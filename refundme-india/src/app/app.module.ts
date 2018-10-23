@@ -16,12 +16,17 @@ import { SubscribeNewsletterComponent } from './components/subscribe-newsletter/
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { PressReleaseComponent } from './components/press-release/press-release.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
+import { LoginSignupComponent } from './components/login-signup/login-signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes} from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from "@angular/http";
+
 
 
 const appRoutes: Routes = [
   {path: 'home', component:HomeComponent},
+  {path:'Login-Signup',component:LoginSignupComponent },
   {path: '**', redirectTo: '/home', pathMatch:'full'}
 ]
 
@@ -41,11 +46,15 @@ const appRoutes: Routes = [
     SubscribeNewsletterComponent,
     TestimonialComponent,
     PressReleaseComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    LoginSignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
@@ -63,7 +72,8 @@ const appRoutes: Routes = [
     SubscribeNewsletterComponent,
     TestimonialComponent,
     PressReleaseComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    LoginSignupComponent
     ]
 })
 export class AppModule { }

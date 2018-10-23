@@ -1,6 +1,6 @@
 .bannerContainer{
   background: url('/assets/images/banner-bg.jpg') no-repeat center center fixed;
-  min-height: 729px;
+  /*min-height: 729px;*/
   position:relative;
   display: flex;
   align-items: center;
@@ -100,5 +100,8 @@ input {
   }
   .descriptionContent{
     margin-bottom:0;
+  }
+  .bannerContainer{
+    height:72vh;
   }
 }

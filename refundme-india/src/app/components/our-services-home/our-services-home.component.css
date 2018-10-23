@@ -4,13 +4,11 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding-bottom:20px;
 }
 .ourServices{
 	font-size:90%;
 	text-align:center;
-}
-.ourServices:nth-child(3n+4){
-	clear:left;
 }
 .ourServices .discription h4{
 	font-size:150%;
@@ -34,7 +32,8 @@
 }
 .discription{
 	text-align:center;
-	padding-left:20px;
+	padding-right:20px;
+	padding-left:0;
 }
 .delayForcast{
 	background:#252525;
@@ -54,11 +53,14 @@
 .preBookMeal{
 	background:#f17776;
 }
-@media only screen and (min-width:768px){
+@media only screen and (min-width:1199px){
 	.discription{
-		text-align:left!important;
+		text-align:justify!important;
 	}
 	.ourServices{
 		padding:50px 0;
+	}
+	.ourServices:nth-child(3n+4){
+		clear:left;
 	}
 }

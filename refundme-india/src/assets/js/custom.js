@@ -8,7 +8,7 @@ $(function () {
          $('.donatationMessageHome').css({'height':ourObjectsMessageSection});
     }
     else {
-       $('body').css({'padding-top':headerHeight});
+       $('body').css({'padding-top':headerHeight+40});
     }
 	
 	//device menu icon change
@@ -106,6 +106,8 @@ $(window).resize(function(){
 $(document).ready(function(){
   $("#navbar").find("li").on("click", "a", function () {
      $('.navbar-collapse.in').collapse('hide');
+     $('#navbar-hamburger').toggleClass('hidden');
+    $('#navbar-close').toggleClass('hidden');  
  });
  if ($(window).width() > 768) {
     $('.navbar-collapse.in').collapse('show');

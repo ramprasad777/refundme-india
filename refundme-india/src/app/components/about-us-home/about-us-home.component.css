@@ -6,6 +6,10 @@
     background-size: cover;
     position: relative;
 }
+.thumbnailBlock{
+	/*max-height:150px;
+	margin-bottom: 2.5rem!important;*/
+}
 .thumbnailBlock a{
 	display: block;
 }
@@ -13,6 +17,7 @@
 	background: transparent;
 	border:none;
 	padding:0;
+	width:100%;
 	border-radius: 0;
 }
 .mb-4, .my-4 {

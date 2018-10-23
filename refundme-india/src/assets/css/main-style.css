@@ -374,13 +374,13 @@ p {
   padding: 20px 0; }
 
 .mainNavigation li a {
-  font-family: 'Titillium-Web-Regular';
+  font-family: 'Titillium-Web-Light';
   color: #5d5c5c;
-  font-size: 150%; }
+  font-size: 130%; }
 
 @media only screen and (min-width: 1200px) {
   .skewedBox {
-    min-height: 730px; }
+    height: 72vh; }
   .skewedContentBlock {
     position: absolute !important;
     right: -80px;

@@ -1,5 +1,14 @@
+.downloadAppSection{
+    background:url('/assets/images/download-app-bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
 .downloadAppSection .downloadAppBlock{
 	border:1px solid #efeeee;
+    background:rgba(255,255,255,.6);
 }
 .downloadAppIcons{
 	text-align: center;
