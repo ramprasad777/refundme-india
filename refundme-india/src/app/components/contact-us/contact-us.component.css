@@ -1,8 +1,65 @@
-.contactBannerSection{
+.contactBannerSection, .contactDetailSection{
 	background:url('/assets/images/contact.jpg') no-repeat center center fixed;
 	 -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     padding-bottom:20px;
+    min-height:300px;
+    display: flex;
+    align-items: center;
+}
+.contactDetailSection{
+	background:url('https://www.refundme.in/assets/images/blog_img2.jpg') no-repeat center center fixed;
+}
+.addressSection .address{
+	font-size:150%;
+	text-align: left;
+}
+.addressSection .address h4{
+	font-size:150%;
+	color:;
+}
+.addressSection .address p{
+	line-height: 40px;
+}
+.contactDetailSection{
+	line-height: 40px;
+	font-size:130%;
+	font-family:'Titillium-Web-Regular', sans-serif;
+	color:#387fa5;
+}
+.contactDetailSection h2{
+	font-family:'Titillium-Web-Bold', sans-serif;
+	color:#387fa5;
+	margin-bottom:20px;
+}
+.contactFormSection{
+	background:url('/assets/images/contact-form-bg.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom:20px;
+}
+.contactFormSection .contactForm{
+	margin:0 auto;
+	float:inherit;
+	text-align: left;
+	font-family:'Titillium-Web-Regular', sans-serif;
+}
+.contactFormSection .contactForm label{
+	font-size:130%;
+}
+.contactFormSection .contactForm input, .contactFormSection .contactForm textarea{
+	padding:.8em;
+	height:auto;
+	font-size:110%;
+	resize:none;
+	border-radius:0;
+	background-color:rgba(255,255,255,0.5);
+}
+.contactFormSection .mainBtnWhite{
+	margin: 0 auto;
+	display: block;
 }

@@ -1,143 +1,130 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
-  <section class="contactBannerSection">
-  	<div class="container">
-  		<div class="row no-margin align-items-center justify-content-between">
-  			<div class="col-sm-12 text-center header-heading ">
-  				<h2>CONTACT US</h2>
+  	<section class="contactBannerSection">
+  		<div class="container">
+  			<div class="row no-margin align-items-center justify-content-between">
+  				<div class="col-sm-12 text-center header-heading ">
+  					<h2>CONTACT US</h2>
+  				</div>
   			</div>
   		</div>
-  	</div>
-  </section>
-  <section>
-  	<div class="container mt-4 mb-4">
-  		<h2 class="mainHeading">Contact Us</h2>
-  		<div class="row no-margin contact-form justify-content-lg-center">
-  			<div class="col col-sm-4 p-4" style="background-color: #3ba6e1;">
-  				<h5>Get In Touch</h5>
-  				<hr>
-  				<div *ngIf="!name; else forminfo">
-  					<form [formGroup]="rForm" (ngSubmit)="saveContactUs(rForm.value)">
-  						<div class="form-container">
-  							<div class="row columns">
-  								<div class="col-sm-6">
-  									<div class="form-group">
-  										<label class="width-100">Name
-  											<input type="text" formControlName="fname" class="form-control">
-  										</label>
-  										<div class="alert" *ngIf="!rForm.controls['fname'].valid && rForm.controls['fname'].touched">{{ titleAlert }}</div>
-  									</div>
-  								</div>
-  								<div class="col-sm-6">
-  									<div class="form-group">
-  										<label class="width-100">Last Name
-  											<input type="text" formControlName="lname" class="form-control">
-  										</label>
-  										<div class="alert" *ngIf="!rForm.controls['lname'].valid && rForm.controls['lname'].touched">{{ titleAlert }}</div>
-  									</div>
-  								</div>
-  								<div class="col-sm-6">
-  									<div class="form-group">
-  										<label class="width-100">Email
-  											<input type="text" formControlName="email" class="form-control">
-  										</label>
-  										<div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{ titleAlert }}</div>
-  									</div>
-  								</div>
-  								<div class="col-sm-6">
-  									<div class="form-group">
-  										<label class="width-100">Phone
-  											<input type="text" formControlName="phone" class="form-control">
-  										</label>
-  										<div class="alert" *ngIf="!rForm.controls['phone'].valid && rForm.controls['phone'].touched">{{ titleAlert }}</div>
-  									</div>
-  								</div>
-  								<div class="col-sm-6">
-  									<div class="form-group">
-  										<label class="width-100">Job Title
-  											<input type="text" formControlName="jobTitle" class="form-control">
-  										</label>
-  										<div class="alert" *ngIf="!rForm.controls['jobTitle'].valid && rForm.controls['jobTitle'].touched">{{ titleAlert }}</div>
-  									</div>
-  								</div>
-  								<div class="col-sm-6">
-  									<div class="form-group">
-  										<label class="width-100">Organization
-  											<input type="text" formControlName="organization" class="form-control">
-  										</label>
-  										<div class="alert" *ngIf="!rForm.controls['organization'].valid && rForm.controls['organization'].touched">{{ titleAlert }}</div>
-  									</div>
-  								</div>
-  								<div class="col-sm-12">
-  									<div class="form-group">
-  										<label class="width-100">Message
-  											<textarea rows="3" formControlName="message" class="form-control"></textarea>
-  										</label>
-  										<div class="alert" *ngIf="!rForm.controls['message'].valid && rForm.controls['message'].touched">{{ titleAlert }}</div>
-  									</div>
-  								</div>
-  								<div class="col-sm-6">
-  									<div class="form-group">
-  										<label class="width-100">Captcha
-  											<!-- <div class="g-recaptcha" data-sitekey="6LcNWmcUAAAAAGddpwBJBvKeYXkYCOlwWM1xSwMC"></div> 
-											<re-captcha (resolved)="resolved($event)" siteKey="6LcNWmcUAAAAAGddpwBJBvKeYXkYCOlwWM1xSwMC"></re-captcha>-->
-  										</label>
-  										<!-- <div class="alert" *ngIf="!rForm.controls['captcha'].valid && rForm.controls['captcha'].touched">{{ titleAlert }}</div> -->
-  									</div>
-  								</div>
-  								<div class="col-sm-12">
-  									<input type="submit" class="btn btn-default button expanded" value="Submit Form" [disabled]="!rForm.valid">
-  								</div>
-  							</div>
-  						</div>
-  					</form>
-  				</div>
-  				
-		</div> 
-		<div class="col-sm-2"></div>
-		<div class="col col-sm-4 contact-info">
-			<h5>Contact us</h5>
-			<hr width="40%" align="left">
-			<ul class="list-unstyled">
-				<li>
-					<p><img src="assets/images/call.svg" class="img-fluid"> +91 – 120-2400810 </p>
-				</li>
-				<li>
-					<p><img src="assets/images/call.svg" class="img-fluid"> +91 – 120-2400811 </p>
-				</li>
-				<li>
-					<p><img src="assets/images/call.svg" class="img-fluid"> +91 – 9899721261 </p>
-				</li>
-				<li>
-					<p><a href="#0"><img src="assets/images/email.svg" class="img-fluid"> info@refundme.in </a></p>
-				</li>
-				<li>
-					<p><a href="#0"><img src="assets/images/email.svg" class="img-fluid"> claim@refundme.in </a></p>
-				</li>
-				<li>
-					<p><a href="#0"><img src="assets/images/email.svg" class="img-fluid">connect@refundme.in</a></p>
-				</li>
-				<li>
-					<h5 class="mt-5">Address</h5>
-					<hr width="40%" align="left">
-					<p>
-						refund.me India Services Pvt. Ltd.
-						Unit- 501, Tower-II, 
-						Highway Tower, 
-						A-13/2,3,4 , 
-						Sector-62, 
-						Gautam Budh Nagar (NOIDA)- 201309,
+  	</section>
+  	<section class="section addressSection">
+	    <div class="container">
+	    	<h2 class="mainHeading">Address</h2>
+	        <div class="row">
+	            <div class="col-xs-12 col-sm-6">
+	                <div class="google-map">
+	                	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0483593822496!2d77.37158331545025!3d28.628312691022035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5573f243169%3A0xe4fb54886558dd66!2srefund.me+India+-+flight+cancellation+compensation!5e0!3m2!1sen!2sin!4v1531993827939" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+	                </div>
+	            </div>
+	            <div class="col-xs-12 col-sm-6 address">
+			      	<h4> refund.me India Services Pvt. Ltd. </h4>
+			        <p>
+			          	Unit- 501, Tower-II, <br>
+						Highway Tower, <br>
+						A-13/2,3,4 , <br>
+						Sector-62, <br>
+						Gautam Budh Nagar (NOIDA)- 201309,<br>
 						Uttar Pradesh
-					</p>
-				</li>
-			</ul>
-		</div> 
-	</div>
-</div>
-</section>
-<section>
-	<div class="row no-margin">
-		<div class="col-sm-12">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0483593822496!2d77.37158331545025!3d28.628312691022035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5573f243169%3A0xe4fb54886558dd66!2srefund.me+India+-+flight+cancellation+compensation!5e0!3m2!1sen!2sin!4v1531993827939" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+			        </p>
+			    </div>
+	        </div>
+	    </div>
+	</section>
+	<section class="section contactDetailSection">
+		<div class="container">
+			<h2 class="mainHeading">Contact Details</h2>
+		    <div class="row">
+		      	<div class="col-sm-12 text-center">
+		      		<div class="col-xs-12 col-sm-6 text-center">
+		      			<img src="https://www.refundme.in/assets/images/call.svg" class="" alt="call">
+		      			<h2>Call Us</h2>
+		      			<div class="col-sm-12 m-top-20">
+					      	<ul class="list-unstyled">
+					      		<li><i class="fa fa-phone" aria-hidden="true"> </i> +91 – 120-2400810 </li>
+					      		<li><i class="fa fa-phone" aria-hidden="true"> </i> +91 – 120-2400811 </li>
+					      		<li><i class="fa fa-mobile fa-lg" aria-hidden="true"> </i> +91 – 9899721261 </li>
+					      	</ul>
+		      			</div>
+		      		</div>
+		      		<div class="col-xs-12 col-sm-6">
+		      			<img src="https://www.refundme.in/assets/images/msg.svg" alt="Message">
+		      			<h2>Write Us</h2>
+		      			<div class="col-sm-12 m-top-20">
+					      	<ul class="list-unstyled">
+					      		<li><i class="fa fa-envelope" aria-hidden="true"> </i> info@refundme.in </li>
+					      		<li><i class="fa fa-envelope" aria-hidden="true"> </i> claim@refundme.in </li>
+					      		<li><i class="fa fa-envelope" aria-hidden="true"> </i> connect@refundme.in </li>
+					      	</ul>
+		      			</div>
+		      		</div>
+		      	</div>
+		    </div>
 		</div>
-	</div>
-</section>
+	</section>
+	<section class="section pressReleaseSection">
+		<div class="container">
+			<h2 class="mainHeading">Press Release</h2>
+			<div class="row">
+				<div class="col-sm-12 text-left">
+			      	<div class="col-sm-8">
+			       		<p><strong>Welcome to the refund.me India News room. Here you can find an online media kit,
+			browse our press releases and download logos, photos and other resources.</strong></p>
+			      		<p>Journalists are welcome to use content from this area of the website for coverage purposes without contacting us for prior permission. If there is any other information you would like, please feel free to contact us. You may want to bookmark this page or sign up below for press releases via email or RSS newsreader feeds.</p>
+			       	</div>
+			       	<div class="col-sm-4 highlightedSection text-center">
+			        	<ul class="list-unstyled">
+				          	<li>
+				          		Press Contact
+				          	</li>
+				          	<li>
+				          		+91 – 9899721261 
+				          	</li>
+				          	<li>
+				          		connect@refundme.in
+				          	</li>
+			          	</ul> 
+			       	</div>
+			    </div>
+			</div>
+		</div>
+	</section>
+	<section class="section contactFormSection">
+    	<div class="container">
+    		<h2 class="mainHeading">CONTACT FORM</h2>
+    	</div>
+    	<div class="container">
+        	<div class="row align-items-center">
+            	<div class="contactForm col-lg-8">
+                    <form class="" action="" method="post" ngNativeValidate>
+                        <div class="row row-sm-offset">
+                            <div class="col-md-4" data-for="name">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="name">Name</label>
+                                    <input type="text" class="form-control input" name="name" id="name" required="" data-form-field="Name">
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-for="email">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="emailId">Email</label>
+                                    <input type="email" class="form-control" name="email" data-form-field="Email" required="" id="emailId">
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-for="phone">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="phoneNumber">Phone</label>
+                                    <input type="tel" class="form-control" name="phone" data-form-field="Phone" require="" id="phoneNumber">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" data-for="message">
+                            <label class="form-control-label" for="message">Message</label>
+                            <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message" id="message"></textarea>
+                        </div>
+                        <button href="" type="submit" class="mainBtnWhite">SEND MESSAGE</button>
+                    </form>
+            	</div>
+        	</div>
+    	</div>
+    </section>

@@ -181,6 +181,7 @@ p{
 .mainNavigation {
   .active{
     a{
+      color: #10afd4;
       &:after{
         content: '';
         display: block;
