@@ -21,12 +21,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from "@angular/http";
+import { KnowYourRightsComponent } from './components/know-your-rights/know-your-rights.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 
 
 const appRoutes: Routes = [
   {path: 'home', component:HomeComponent},
   {path:'Login-Signup',component:LoginSignupComponent },
+  {path:'know-your-rights',component:KnowYourRightsComponent },
+  {path:'contact-us',component:ContactUsComponent },
+  {path: '', redirectTo: '/home', pathMatch:'full'},
   {path: '**', redirectTo: '/home', pathMatch:'full'}
 ]
 
@@ -47,7 +52,9 @@ const appRoutes: Routes = [
     TestimonialComponent,
     PressReleaseComponent,
     MainFooterComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
+    KnowYourRightsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +80,9 @@ const appRoutes: Routes = [
     TestimonialComponent,
     PressReleaseComponent,
     MainFooterComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
+    KnowYourRightsComponent,
+    ContactUsComponent
     ]
 })
 export class AppModule { }

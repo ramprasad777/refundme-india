@@ -1,7 +1,7 @@
 import { Injectable, Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from  '@angular/http';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
     emailAlert:string = 'Email required.';
 	passwordAlert:string = 'Password required.';
 
-  	constructor(private fb: FormBuilder, private http:Http) { 
+  	constructor(private fb: FormBuilder, private http:Http, private router: Router) { 
 		this.loginForm = fb.group({
 			'email' : new FormControl('', Validators.compose([
 				Validators.required,
@@ -95,7 +95,12 @@ export class HeaderComponent implements OnInit {
 		);
 	}
 
-  ngOnInit() {
-  }
-
+  	ngOnInit() {
+	  	this.router.events.subscribe((evt) => {
+	        if (!(evt instanceof NavigationEnd)) {
+	            return;
+	        }
+	        window.scrollTo(0, 0)
+	    });
+  	}
 }

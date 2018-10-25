@@ -1,5 +1,5 @@
-.ourServicesSection{
-	background:url('/assets/images/our-services-bg.jpg') no-repeat center center fixed;
+.basicRightSection{
+	background:url('/assets/images/know-your-right-bg.jpg') no-repeat center center fixed;
 	 -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -35,30 +35,29 @@
 	padding-right:20px;
 	padding-left:0;
 }
-.delayForcast{
-	background:#252525;
+.box {
+  transition: box-shadow .3s;
 }
-.cabServicesBg, .journeyChecklist, .baggageInformation{
-	background:#5b5da8;
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.3); 
 }
-.assistanceServices, .expenseTracker{
-	background:#f68f40;
+.fareTable{
+	font-family:'Titillium-Web-Regular', sans-serif;
 }
-.aboutAirport{
-	background:#78c597;
+.fareTable td:nth-child(odd), .fareTable th:nth-child(odd){
+	text-align:left;
+	width:50%;
 }
-.journeyChecklist, .weatherForecast{
-	background:#0eadca;
-}
-.preBookMeal{
-	background:#f17776;
+.fareTable td:nth-child(even), .fareTable th:nth-child(even){
+	text-align:right;
+	width:50%;
 }
 @media only screen and (min-width:1199px){
 	.discription{
-		text-align:justify!important;
+		text-align:center!important;
 	}
 	.ourServices{
-		padding:30px 0;
+		padding:30px 15px;
 	}
 	.ourServices:nth-child(3n+4){
 		clear:left;

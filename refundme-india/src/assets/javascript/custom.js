@@ -1,7 +1,7 @@
 $(function () {
-    var headerHeight = $('.navbar-fixed-top').height();
-    var ourObjectsMessageSection = $('.ourObjectsMessage').height();
-	var $paymentTypeOption = $('input[name="paymentType"]');
+  var headerHeight = $('.navbar-fixed-top').height();
+  var ourObjectsMessageSection = $('.ourObjectsMessage').height();
+  var $paymentTypeOption = $('input[name="paymentType"]');
 
     if ($(window).width() > 768) {
          $('body').css({'padding-top':headerHeight+40});
@@ -17,16 +17,6 @@ $(function () {
 		$('#navbar-close').toggleClass('hidden');  
 	});
 	
-	//changing payment input value
-	$(document).on('click', '.paymentType input:radio', function(){
-		var value = $(".paymentType input[type='radio']:checked").val();
-		$('#enterotheramount').val(value);
-	})
-	
-	//setting time for testimonial
-	$('#quote-carousel').carousel({
-		pause: true, interval: 10000,
-	});
 
 	//Start Header Search
 	 $('a[href="#search"]').on('click', function(event) {
