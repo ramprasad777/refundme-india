@@ -27,6 +27,8 @@ import { SharedService } from './shared.service';
 import { ToasterService } from './toaster.service';
 import { AuthGuard } from './auth.guard';
 import 'rxjs/Rx';
+import { VendorsComponent } from './components/vendors/vendors.component';
+import { VendorDetailFormComponent } from './components/vendor-detail-form/vendor-detail-form.component';
 
 
 
@@ -35,6 +37,7 @@ const appRoutes: Routes = [
   {path:'Login-Signup',component:LoginSignupComponent },
   {path:'know-your-rights',component:KnowYourRightsComponent },
   {path:'contact-us',component:ContactUsComponent },
+  {path:'vendors',component:VendorsComponent },
   {path: '', redirectTo: '/home', pathMatch:'full'},
   {path: '**', redirectTo: '/home', pathMatch:'full'}
 ]
@@ -58,7 +61,9 @@ const appRoutes: Routes = [
     MainFooterComponent,
     LoginSignupComponent,
     KnowYourRightsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    VendorsComponent,
+    VendorDetailFormComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +91,8 @@ const appRoutes: Routes = [
     MainFooterComponent,
     LoginSignupComponent,
     KnowYourRightsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    VendorsComponent
     ]
 })
 export class AppModule { }

@@ -327,7 +327,7 @@ p {
   border: 1px solid #fff; }
 
 .mainBtn:hover {
-  box-shadow: 200px 0 0 #31708f inset;
+  box-shadow: 500px 0 0 #31708f inset;
   text-decoration: none;
   color: #fff; }
 
@@ -400,6 +400,98 @@ p {
     background-color: transparent !important; }
     .mainNavigation li a:hover:after, .mainNavigation li a:focus:after {
       width: 100%; }
+
+.bannerContainer h2 {
+  color: #fff;
+  margin: auto; }
+
+.bannerContainer input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc; }
+
+.descriptionContent {
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 20px; }
+
+.descriptionContent h3 {
+  text-transform: uppercase;
+  font-size: 250%; }
+
+.bannerContainer input {
+  display: block;
+  width: 100%;
+  height: 3em;
+  padding: 16px 0px;
+  border: 0;
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  border-bottom: 1px solid #ccc;
+  color: #212121;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.2s ease-in-out; }
+
+.enquiryForm fieldset {
+  position: relative;
+  margin: 15px 0 0; }
+
+.enquiryForm fieldset:first-child {
+  margin-top: 0; }
+
+.enquiryForm fieldset:first-child input {
+  border-radius: 4px 4px 0 0; }
+
+.enquiryForm fieldset:last-child input {
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15); }
+
+.enquiryForm label {
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  color: #909090;
+  width: 100%;
+  text-align: left;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease-in-out; }
+
+.form-css-label input[data-empty="false"], .form-css-label input:valid, .form-css-label input:focus {
+  padding: 40px 8px 10px 0;
+  color: #fff;
+  font-size: 18px; }
+
+.form-css-label input:focus {
+  outline: 0;
+  color: #fff;
+  font-size: 18px; }
+
+.form-css-label input[data-empty="false"] + label, .form-css-label input:valid + label, .form-css-label input:focus + label {
+  color: #ececec;
+  font-weight: 500;
+  font-size: 12px;
+  -webkit-transform: translate3d(0, -15px, 0);
+  transform: translate3d(0, -15px, 0); }
+
+.enquiryForm input[type=date]:invalid::-webkit-datetime-edit {
+  visibility: hidden; }
+
+@media only screen and (min-width: 1199px) {
+  .bannerContainer h2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px; }
+  .descriptionContent {
+    margin-bottom: 0; }
+  .bannerContainer {
+    height: 72vh; } }
 
 @media only screen and (min-width: 1200px) {
   .skewedBox {
