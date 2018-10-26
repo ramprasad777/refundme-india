@@ -1,0 +1,54 @@
+/*Login signup modal*/
+.modal-lg{
+    width:600px;
+}
+.loginPopup{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.registerDiv{
+    padding:0;
+}
+.registerDiv .nav-tabs li{
+    width:50%;
+}
+.registerDiv .nav-tabs li a{
+    padding:20px;
+    text-align:center;
+    color:#000;
+    background:#ccc;
+    border:none;
+}
+.registerDiv .nav-tabs li.active a{
+    background:#fff;
+}
+.registerDiv .tab-content{
+    padding:30px;
+}
+.registerDiv .tab-content label{
+    display:inline;
+    font-weight:300;
+}
+.registerDiv .tab-content .form-group input{
+    border:1px solid #d2d8d8;
+    padding:16px 20px;
+    height:auto;
+    box-shadow:none;
+}
+.registerDiv .tab-content .alert{
+    padding:0;
+    margin:0;
+    color:red;
+}
+.loginSignupBtn{
+    padding:16px 20px;
+    background:#2f889a;
+    color:#fff;
+    width:100%;
+    font-weight:bold;
+}
+.loginSignupBtn:hover{
+    background:#2f889a;
+}

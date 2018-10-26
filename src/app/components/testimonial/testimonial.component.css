@@ -1,0 +1,59 @@
+.testimonialSection {
+    background: url('/assets/images/testimonial-bg.jpg') no-repeat center center fixed;
+    position: relative;
+    background-size: cover;
+}
+.testimonialBlock {
+    border: 10px solid rgba(0,0,0,.7);
+    padding: 20px 0 0;
+    position: relative;
+    min-height: 350px;
+    color:#fff;
+}
+.testimonialPanel .carousel {
+    padding-bottom: 0!important;
+}
+.testimonial-area{
+	position: relative;
+}
+.testimonial-area .testimonialBlock:before {
+    left: -100px;
+    top: -80px;
+    content: '“';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: #000;
+    z-index: 999;
+    font-family: TimesNewRoman,Times New Roman;
+    font-size: 150px;
+    font-weight: 700;
+    font-style: italic;
+    opacity: .4;
+}
+#fade-quote-carousel.carousel .carousel-indicators>li.active {
+    background: #10afd4!important;
+    border-color:#10afd4;
+}
+.carousel-inner blockquote {
+    border-left:none;
+    min-height:100px;
+}
+.carousel-indicators {
+    bottom: 0;
+}
+.carousel-indicators li{
+	width:15px; height:15px;
+}
+#fade-quote-carousel .profile-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 100px;
+    overflow: hidden;
+}
+.testimonial-area .img-circle {
+    border: 5px solid #10afd4;
+}

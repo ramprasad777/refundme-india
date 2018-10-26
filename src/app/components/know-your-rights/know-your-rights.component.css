@@ -1,0 +1,65 @@
+.basicRightSection{
+	background:url('/assets/images/know-your-right-bg.jpg') no-repeat center center fixed;
+	 -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom:20px;
+}
+.ourServices{
+	font-size:90%;
+	text-align:center;
+}
+.ourServices .discription h4{
+	font-size:150%;
+	color:#000;
+	font-weight: 700;
+	margin-top:0;
+}
+.ourServices .discription h4 span{
+	display: block;
+	font-size:80%;
+	color:#7f7f7f;
+	font-style: italic;
+	margin-top:10px;
+}
+.servicesIcon{
+	width:91px;
+	height:91px;
+	display: flex;
+	align-items: center;
+	margin:0 auto;
+}
+.discription{
+	text-align:center;
+	padding-right:20px;
+	padding-left:0;
+}
+.box {
+  transition: box-shadow .3s;
+}
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.3); 
+}
+.fareTable{
+	font-family:'Titillium-Web-Regular', sans-serif;
+}
+.fareTable td:nth-child(odd), .fareTable th:nth-child(odd){
+	text-align:left;
+	width:50%;
+}
+.fareTable td:nth-child(even), .fareTable th:nth-child(even){
+	text-align:right;
+	width:50%;
+}
+@media only screen and (min-width:1199px){
+	.discription{
+		text-align:center!important;
+	}
+	.ourServices{
+		padding:30px 15px;
+	}
+	.ourServices:nth-child(3n+4){
+		clear:left;
+	}
+}

@@ -1,0 +1,97 @@
+//Start icons
+.icons{
+  background-image:url(/assets/images/sprite-icons.png);
+}
+.clockIconLarge, .delayPrediction, .claimCompensation, .airportAssitance, .manageTrip, .cabServices, .airlineAssistance, .baggageInformationIcon, .expanseTrackerIcon, .weatherForecastIcon, .wildlifeSpeciesIcon, .arcticExperiencesIcon, .nationalParksIcon, .daysWildIcon{
+  margin:0 auto;
+  display:block;
+}
+.enquiryFormIcon{
+  width:25px;
+  height:25px;
+  float:right;
+  position:relative;
+}
+.depatureAirport{
+  background-position:0 0;
+}
+.arrivalAirport{
+  background-position:0px -24px;
+}
+.flightNumber{
+  background-position:0px 0;
+}
+.depatureDate{
+  background-position:0px -52px;
+}
+.clockIconLarge{
+  background-position:103px 0;
+  width:103px;
+  height:104px;
+}
+.delayPrediction{
+  background-position:1px -77px;
+  width:42px;
+  height:42px;
+}
+.claimCompensation{
+  background-position:0px -120px;
+  width:52px;
+  height:42px;
+}
+.airportAssitance{
+  background-position:0px -162px;
+  width:35px;
+  height:42px;
+}
+.manageTrip{
+  background-position:0px -205px;
+  width:25px;
+  height:42px;
+}
+.cabServices{
+  background-position:0px -249px;
+  width:35px;
+  height:42px;
+}
+.airlineAssistance{
+  background-position:0px -292px;
+  width:46px;
+  height:42px;
+
+}
+.baggageInformationIcon{
+  background-position:0px -334px;
+  width:44px;
+  height:48px;
+}
+.expanseTrackerIcon{
+  background-position:-48px -1px;
+  width:52px;
+  height:44px;
+}
+.weatherForecastIcon{
+  background-position:-48px -49px;
+  width:46px;
+  height:44px;
+}
+.wildlifeSpeciesIcon{
+  background-position:-121px -106px;
+  width:79px;
+  height:64px;
+}
+.arcticExperiencesIcon{
+  background-position:-121px -171px;
+  width:79px;
+  height:64px;
+}
+.nationalParksIcon{
+  background-position:-121px -236px;
+  width:79px;
+  height:64px;
+}
+.daysWildIcon{
+  background-position:-121px -310px;
+  width:79px;
+  height:64px;
+}
