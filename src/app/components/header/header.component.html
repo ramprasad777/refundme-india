@@ -21,7 +21,9 @@
         <li [routerLinkActive]="['active']"><a routerLink="/know-your-rights">Know Your Rights</a></li>
         <li [routerLinkActive]="['active']"><a routerLink="/mission">Blog</a></li>
         <li [routerLinkActive]="['active']"><a routerLink="/contact-us">Contact us</a></li>
-        <li [routerLinkActive]="['active']"><a href="#" id="loginBtn" data-toggle="modal" data-target="#modalLogin">Log in / Register</a></li>
+        <li *ngIf="!isLoggedIn" [routerLinkActive]="['active']"><a href="#" id="loginBtn" data-toggle="modal" data-target="#modalLogin">Log in / Register</a></li>
+        <li *ngIf="isLoggedIn"  [routerLinkActive]="['active']"><a routerLink="/myaccount">My Account</a></li>
+        <li *ngIf="isLoggedIn"  [routerLinkActive]="['active']"><a (click)="logout()" href="#">Logout</a></li>
         <!--<li [routerLinkActive]="['active']"><a routerLink="/Login-Signup" id="loginBtn" data-toggle="modal" data-target="#modalLogin">Log in / Register</a></li>-->
         <li><a href="#search" id="searchIcon"><i class="fa fa-search"></i></a></li>
       </ul>
@@ -88,7 +90,6 @@
                         </div>
                         <div class="tab-pane" id="Registration">
                             <form [formGroup]="signupForm" (ngSubmit)="registration(signupForm.value)">
-                              <input type="hidden" formControlName="type" value="" />
                               <div class="form-group">
                                 <label for="" class="width-100">Username
                                   <input formControlName="Username" type="text" class="form-control form-control-lg" placeholder="Username">

@@ -2,6 +2,9 @@ import { Injectable, Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from  '@angular/http';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router, NavigationEnd } from '@angular/router';
+import { SharedService } from '../../shared.service';
+import { ToasterService } from '../../toaster.service';
+import { AuthGuard } from '../../auth.guard';
 
 @Component({
   selector: 'app-header',
@@ -10,8 +13,6 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  private apiurl = 'https://staging.quantumsoftech.in/india_app/api/';
-	
 	signupForm: FormGroup;
 	post2:any;       
   	Username:string = '';
@@ -29,8 +30,9 @@ export class HeaderComponent implements OnInit {
     password:string = '';
     emailAlert:string = 'Email required.';
 	passwordAlert:string = 'Password required.';
+	isLoggedIn = false;
 
-  	constructor(private fb: FormBuilder, private http:Http, private router: Router) { 
+  	constructor(public sr: SharedService, private toasterService:ToasterService, private http: Http, private router: Router,private fb: FormBuilder) { 
 		this.loginForm = fb.group({
 			'email' : new FormControl('', Validators.compose([
 				Validators.required,
@@ -38,7 +40,7 @@ export class HeaderComponent implements OnInit {
 			])),
 			'password' : [null, Validators.required],
 			'rememberMe' : '',
-			'type' : 'login'
+			'api_type' : 'login'
 		});
 
 		this.signupForm = fb.group({
@@ -53,46 +55,57 @@ export class HeaderComponent implements OnInit {
 			'Password' : [null, Validators.required],
 			'ConfirmPassword' : [null, Validators.required],
 			'Terms' : [null, Validators.required],
-			'type' : 'registration'
+			'api_type' : 'registration'
 		});
 	}
 	
-	/* checkUsername( $event ){
-		var val		=	$event.target.value;
-		var type	=	'check_username';
-		var data	=	{'value':val, 'type':type};
-		
-		this.http.post(this.apiurl,JSON.stringify(data)).subscribe(
-			res => {
-				console.log(res);
-				UsernameAlert:string = 'Username required & minimum length is 5.';
-			},
-			err => {
-				console.log("Error occured");
-			}
-		);
-	} */
-	
 	registration(data, service) {
-		this.http.post(this.apiurl,JSON.stringify(data)).subscribe(
-			res => {
-				console.log(res);
-			},
-			err => {
-				console.log("Error occured");
+		this.toasterService.Clear();
+		if (data.api_type == null) {
+			data.api_type = 'registration'
+		}
+		this.sr.register(data).subscribe(res_data => {
+			this.toasterService.Clear();
+
+			if (res_data.result == 'error') {
+				this.toasterService.Error(res_data.message);
+			} else if (res_data.result == 'success') {
+				this.toasterService.Success(res_data.message);
+				this.signupForm.reset();
+				document.getElementById('modalLogin').click();
 			}
-		);
+
+		});
 	}
-	
-	login(data, service){
-		this.http.post(this.apiurl,JSON.stringify(data)).subscribe(
-			res => {
-				console.log(res);
-			},
-			err => {
-				console.log("Error occured");
+
+	login(data, service) {
+		this.toasterService.Info('Please wait...');
+		if (data.api_type == null) {
+			data.api_type = 'login'
+		}
+
+		this.sr.login(data).subscribe(res_data => {
+			this.toasterService.Clear();
+			if (res_data.result == 'error') {
+				this.toasterService.Error(res_data.message);
+			} else if (res_data.result == 'success') {
+				this.toasterService.Success(res_data.message);
+				this.loginForm.reset();
+				document.getElementById('modalLogin').click();
+				localStorage.setItem('userToken', res_data.data.token);
+				this.isLoggedIn = true;
+				if (localStorage.getItem('userToken') != null) {
+					this.isLoggedIn = true;
+				}
 			}
-		);
+
+		});
+	}
+
+	logout() {
+		localStorage.removeItem('userToken');
+		this.isLoggedIn = false;
+		this.router.navigate(['/']);
 	}
 
   	ngOnInit() {

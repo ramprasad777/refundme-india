@@ -23,6 +23,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from "@angular/http";
 import { KnowYourRightsComponent } from './components/know-your-rights/know-your-rights.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { SharedService } from './shared.service';
+import { ToasterService } from './toaster.service';
+import { AuthGuard } from './auth.guard';
+import 'rxjs/Rx';
 
 
 
@@ -64,7 +68,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [SharedService,ToasterService],
   bootstrap: [AppComponent,
     HeaderComponent,
     HomeComponent,
