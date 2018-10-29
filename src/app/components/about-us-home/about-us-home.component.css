@@ -44,7 +44,7 @@
 		right:0;
 	}
 	.mrBoieDescription{
-		position: relative; top: 200px; left:50px;
+		position: relative; top: 100px; left:0px;
 	}
 }
 @media only screen and (max-width:1199px){

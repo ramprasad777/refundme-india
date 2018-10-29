@@ -1,0 +1,52 @@
+<!--
+<form action="#" class="form-label form-css-label" ngNativeValidate>
+    <fieldset>
+      <input id="departureAirport" name="departureAirport" type="text" autocomplete="off" required />
+      <label for="departureAirport">Departure Airport </label>
+      <span class="icons enquiryFormIcon depatureAirport"></span>
+    </fieldset>
+    <fieldset>
+      <input id="arrivalAirport" name="arrivalAirport" type="text" autocomplete="off" required />
+      <label for="arrivalAirport">Arrival Airport</label>
+      <span class="icons enquiryFormIcon arrivalAirport"></span>
+    </fieldset>
+    <fieldset>
+      <input id="flightNumber" name="flightNumber" type="text" autocomplete="off" required />
+      <label for="flightNumber">Flight no</label>
+      <span class="icons enquiryFormIcon flightNumber"></span>
+    </fieldset>
+    <fieldset>
+      <input id="date" name="date" type="date" autocomplete="off" required />
+      <label for="date">Date</label>
+      <span class="icons enquiryFormIcon depatureDate"></span>
+    </fieldset>
+    <button type="submit" class="mainBtn">Submit</button>
+</form>-->
+<form class="form-label form-css-label" [formGroup]="flightEnquiryForm" (ngSubmit)="flightEnquiry(flightEnquiryForm.value)">
+  	<fieldset>
+  		<input formControlName="depatureAirport" id="depatureAirport" type="text" required>
+    	<label for="depatureAirport" class="width-100">Departure Airport </label>
+    	<span class="icons enquiryFormIcon depatureAirport"></span>
+    	<div class="alert p-0" *ngIf="!flightEnquiryForm.controls['depatureAirport'].valid && flightEnquiryForm.controls['depatureAirport'].touched">{{ depatureAirportAlert }}</div>
+    </fieldset>
+  	<fieldset>
+  		<input formControlName="arrivalAirport" id="arrivalAirport" type="text" required>
+    	<label for="arrivalAirport" class="width-100">Arrival Airport</label>
+    	<span class="icons enquiryFormIcon arrivalAirport"></span>
+    	<div class="alert p-0" *ngIf="!flightEnquiryForm.controls['arrivalAirport'].valid && flightEnquiryForm.controls['arrivalAirport'].touched">{{ arrivalAirportAlert }}</div>
+    </fieldset>
+	<fieldset>
+    	<input formControlName="flightNumber" id="flightNumber" type="text" required>
+      	<label for="flightNumber">Flight no</label>
+      	<span class="icons enquiryFormIcon flightNumber"></span>
+      	<div class="alert p-0" *ngIf="!flightEnquiryForm.controls['flightNumber'].valid && flightEnquiryForm.controls['flightNumber'].touched">{{ flightNumberAlert }}</div>
+    </fieldset>
+    <fieldset>
+    	<input formControlName="flightDate" id="flightDate" type="date" required>
+      	<label for="flightDate">Date</label>
+      	<span class="icons enquiryFormIcon depatureDate"></span>
+      	<div class="alert p-0" *ngIf="!flightEnquiryForm.controls['flightDate'].valid && flightEnquiryForm.controls['flightDate'].touched">{{ flightDateAlert }}</div>
+    </fieldset>
+  	<!--<button type="submit" class="mainBtn" [disabled]="!flightEnquirySearch.valid">Submit</button>-->
+  	<button type="submit" class="btn btn-default button expanded loginSignupBtn mainBtn" [disabled]="!flightEnquiryForm.valid">Submit</button>
+</form>

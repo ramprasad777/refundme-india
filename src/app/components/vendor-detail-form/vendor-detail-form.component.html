@@ -12,16 +12,20 @@
 		<div class="col-xs-12 col-sm-12 col-lg-5 skewedContentBlock">
 			<div class="enquiryForm skewedBox">
 				<div class="form">
-					<form action="#" class="form-label form-css-label" ngNativeValidate>
+					<form class="form-label form-css-label" [formGroup]="venderLoginForm" (ngSubmit)="venderLogin(venderLoginForm.value)">
 					    <fieldset>
-					      <input id="departureAirport" name="departureAirport" type="text" autocomplete="off" required />
-					      <label for="departureAirport">User Name <span class="icons enquiryFormIcon depatureAirport"></span></label>
+					      	<input formControlName="venderEmail" id="venderEmail" name="venderEmail" type="text" required />
+					      	<label for="venderEmail">User Name</label>
+					      	<span class="enquiryFormIcon"><i class="fa fa-user"></i></span>
+					      	<div class="alert p-0" *ngIf="!venderLoginForm.controls['venderEmail'].valid && venderLoginForm.controls['venderEmail'].touched">{{ venderEmailAlert }}</div>
 					    </fieldset>
 					    <fieldset>
-					      <input id="arrivalAirport" name="arrivalAirport" type="password" autocomplete="off" required />
-					      <label for="arrivalAirport">Password <span class="icons enquiryFormIcon arrivalAirport"></span></label>
+					      	<input formControlName="venderPassword" id="venderPassword" name="venderPassword" type="password" required />
+					      	<label for="venderPassword">Password</label>
+					      	<span class="enquiryFormIcon"><i class="fa fa-lock"></i></span>
+                        	<div class="alert p-0" *ngIf="!venderLoginForm.controls['venderPassword'].valid && venderLoginForm.controls['venderPassword'].touched">{{ venderpasswordAlert }}</div>
 					    </fieldset>
-					    <button type="submit" class="mainBtn">Login</button>
+					    <button type="submit" class="btn btn-default button expanded loginSignupBtn mainBtn" [disabled]="!venderLoginForm.valid">Login</button>
 					</form>
 				</div>
 			</div>

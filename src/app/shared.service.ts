@@ -152,4 +152,32 @@ export class SharedService {
         return res.json();
       });
   }
+
+
+  /* ######################### Flight Enquiry Form ######################### */
+
+  flightEnquiry(param) {
+    console.log('inside flightEnquiryForm shared service');
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.apiurl_main, param, options).map(
+      res => {
+        return res.json();
+      });
+  }
+
+
+  /* ######################### Vender Login Form ######################### */
+
+  venderLogin(param) {
+    console.log('inside venderLogin shared service');
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.apiurl_main, param, options).map(
+      res => {
+        return res.json();
+      });
+  }
 }

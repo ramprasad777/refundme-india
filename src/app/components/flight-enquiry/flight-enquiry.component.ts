@@ -7,45 +7,59 @@ import { ToasterService } from '../../toaster.service';
 import { AuthGuard } from '../../auth.guard';
 
 @Component({
-  selector: 'app-vendor-detail-form',
-  templateUrl: './vendor-detail-form.component.html',
-  styleUrls: ['./vendor-detail-form.component.css']
+  selector: 'app-flight-enquiry',
+  templateUrl: './flight-enquiry.component.html',
+  styleUrls: ['./flight-enquiry.component.css']
 })
-export class VendorDetailFormComponent implements OnInit {
+export class FlightEnquiryComponent implements OnInit {
 
-  	venderLoginForm: FormGroup;
+	flightEnquiryForm: FormGroup;
   	post:any;       
-  	venderEmail:string = '';
-    venderPassword:string = '';
-    venderEmailAlert:string = 'Username required.';
-	venderpasswordAlert:string = 'Password required.';
+  	depatureAirport:string = '';
+    arrivalAirport:string = '';
+    flightNumber:string = '';
+    flightDate:string = '';
+    depatureAirportAlert:string = 'Departure Airport required.';
+	arrivalAirportAlert:string = 'Arrival Airport required.';
+	flightNumberAlert:string = 'Flight Number required.';
+	flightDateAlert:string = 'Flight Date required.';
 	isLoggedIn = false;
 
   	constructor(public sr: SharedService, private toasterService:ToasterService, private http: Http, private router: Router,private fb: FormBuilder) { 
-		this.venderLoginForm = fb.group({
-			'venderEmail' : new FormControl('', Validators.compose([
+		this.flightEnquiryForm = fb.group({
+			'depatureAirport' : new FormControl('', Validators.compose([
 				Validators.required,
 				Validators.minLength(5)
 			])),
-			'venderPassword' : [null, Validators.required],
-			'api_type' : 'vendor_login'
+			'arrivalAirport' : new FormControl('', Validators.compose([
+				Validators.required,
+				Validators.minLength(5)
+			])),
+			'flightNumber' : new FormControl('', Validators.compose([
+				Validators.required,
+				Validators.minLength(5)
+			])),
+			'flightDate' : new FormControl('', Validators.compose([
+				Validators.required,
+				Validators.minLength(5)
+			])),
+			'api_type' : 'flight_enquiry'
 		});
 	}
 
-	venderLogin(data, service) {
-		
+	flightEnquiry(data, service) {
 		this.toasterService.Info('Please wait...');
 		if (data.api_type == null) {
-			data.api_type = 'venderLoginForm'
+			data.api_type = 'flightEnquiryForm'
 		}
 
-		this.sr.venderLogin(data).subscribe(res_data => {
+		this.sr.flightEnquiry(data).subscribe(res_data => {
 			this.toasterService.Clear();
 			if (res_data.result == 'error') {
 				this.toasterService.Error(res_data.message);
 			} else if (res_data.result == 'success') {
 				this.toasterService.Success(res_data.message);
-				this.venderLoginForm.reset();
+				this.flightEnquiryForm.reset();
 				document.getElementById('modalLogin').click();
 				localStorage.setItem('userToken', res_data.data.token);
 				this.isLoggedIn = true;
@@ -53,6 +67,7 @@ export class VendorDetailFormComponent implements OnInit {
 					this.isLoggedIn = true;
 				}
 			}
+
 		});
 	}
 

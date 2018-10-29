@@ -29,6 +29,9 @@ import { AuthGuard } from './auth.guard';
 import 'rxjs/Rx';
 import { VendorsComponent } from './components/vendors/vendors.component';
 import { VendorDetailFormComponent } from './components/vendor-detail-form/vendor-detail-form.component';
+import { VenderServicesComponent } from './components/vender-services/vender-services.component';
+import { FlightEnquiryComponent } from './components/flight-enquiry/flight-enquiry.component';
+import { VenderDashboardComponent } from './components/vender-dashboard/vender-dashboard.component';
 
 
 
@@ -38,6 +41,7 @@ const appRoutes: Routes = [
   {path:'know-your-rights',component:KnowYourRightsComponent },
   {path:'contact-us',component:ContactUsComponent },
   {path:'vendors',component:VendorsComponent },
+  {path:'vender-dashboard',component:VenderDashboardComponent },
   {path: '', redirectTo: '/home', pathMatch:'full'},
   {path: '**', redirectTo: '/home', pathMatch:'full'}
 ]
@@ -63,7 +67,10 @@ const appRoutes: Routes = [
     KnowYourRightsComponent,
     ContactUsComponent,
     VendorsComponent,
-    VendorDetailFormComponent
+    VendorDetailFormComponent,
+    VenderServicesComponent,
+    FlightEnquiryComponent,
+    VenderDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +99,10 @@ const appRoutes: Routes = [
     LoginSignupComponent,
     KnowYourRightsComponent,
     ContactUsComponent,
-    VendorsComponent
+    VendorsComponent,
+    VenderServicesComponent,
+    FlightEnquiryComponent,
+    VenderDashboardComponent
     ]
 })
 export class AppModule { }

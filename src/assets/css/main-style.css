@@ -46,7 +46,11 @@
   width: 25px;
   height: 25px;
   float: right;
-  position: relative; }
+  position: absolute;
+  right: 0;
+  top: 25px; }
+  .enquiryFormIcon .fa {
+    color: #fff; }
 
 .depatureAirport {
   background-position: 0 0; }
@@ -58,7 +62,8 @@
   background-position: 0px 0; }
 
 .depatureDate {
-  background-position: 0px -52px; }
+  background-position: 0px -52px;
+  z-index: -1; }
 
 .clockIconLarge {
   background-position: 103px 0;
@@ -307,6 +312,27 @@ p {
       bottom: 0;
       margin: auto; }
 
+.enquiryForm .alert {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  color: #fff;
+  background: rgba(195, 11, 11, 0.6);
+  position: relative;
+  padding: 3px 10px;
+  font-size: 90%;
+  top: -1px;
+  border-radius: 0; }
+
+.enquiryForm .btn-default {
+  background-color: transparent; }
+
+.enquiryForm .btn {
+  border-radius: 0;
+  padding: 10px 50px;
+  font-size: 150%;
+  color: #fff; }
+
 .mainBtn, .mainBtnWhite {
   height: auto;
   width: auto;
@@ -482,12 +508,76 @@ p {
 .enquiryForm input[type=date]:invalid::-webkit-datetime-edit {
   visibility: hidden; }
 
+.ourServicesSection {
+  background: url("/assets/images/our-services-bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 20px; }
+
+.ourServices {
+  font-size: 90%;
+  text-align: center; }
+
+.ourServices .discription h4 {
+  font-size: 150%;
+  color: #000;
+  font-weight: 700;
+  margin-top: 0; }
+
+.ourServices .discription h4 span {
+  display: block;
+  font-size: 80%;
+  color: #7f7f7f;
+  font-style: italic;
+  margin-top: 10px; }
+
+.servicesIcon {
+  width: 91px;
+  height: 91px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto; }
+
+.discription {
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 0; }
+
+.delayForcast {
+  background: #252525; }
+
+.cabServicesBg, .journeyChecklist, .baggageInformation {
+  background: #5b5da8; }
+
+.assistanceServices, .expenseTracker {
+  background: #f68f40; }
+
+.aboutAirport {
+  background: #78c597; }
+
+.journeyChecklist, .weatherForecast {
+  background: #0eadca; }
+
+.preBookMeal {
+  background: #f17776; }
+
+@media only screen and (min-width: 1199px) {
+  .discription {
+    text-align: justify !important; }
+  .ourServices {
+    padding: 30px 0; }
+  .ourServices:nth-child(3n+4) {
+    clear: left; } }
+
 @media only screen and (min-width: 1199px) {
   .bannerContainer h2 {
     position: absolute;
     left: 0;
     right: 0;
-    top: 50px; }
+    top: 50px;
+    z-index: 1; }
   .descriptionContent {
     margin-bottom: 0; }
   .bannerContainer {

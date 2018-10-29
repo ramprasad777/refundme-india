@@ -10,7 +10,12 @@
   width:25px;
   height:25px;
   float:right;
-  position:relative;
+  position:absolute;
+  right:0;
+  top:25px;
+  .fa{
+    color:#fff;
+  }
 }
 .depatureAirport{
   background-position:0 0;
@@ -23,6 +28,7 @@
 }
 .depatureDate{
   background-position:0px -52px;
+  z-index:-1;
 }
 .clockIconLarge{
   background-position:103px 0;
