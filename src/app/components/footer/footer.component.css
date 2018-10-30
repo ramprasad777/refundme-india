@@ -1,6 +1,8 @@
 .mainFooterSection{
 	background:#20313f;
 	padding:0;
+	position: relative;
+	z-index: 2;
 }
 ul.tabs {
 	margin: 0;

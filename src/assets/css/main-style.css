@@ -571,6 +571,9 @@ p {
   .ourServices:nth-child(3n+4) {
     clear: left; } }
 
+.vender-dashboard {
+  padding: 0; }
+
 @media only screen and (min-width: 1199px) {
   .bannerContainer h2 {
     position: absolute;
