@@ -41,7 +41,7 @@ const appRoutes: Routes = [
   {path:'know-your-rights',component:KnowYourRightsComponent },
   {path:'contact-us',component:ContactUsComponent },
   {path:'vendors',component:VendorsComponent },
-  {path:'vender-dashboard',component:VenderDashboardComponent },
+  {path:'vender-dashboard',canActivate : [AuthGuard], component:VenderDashboardComponent },
   {path: '', redirectTo: '/home', pathMatch:'full'},
   {path: '**', redirectTo: '/home', pathMatch:'full'}
 ]

@@ -10,16 +10,22 @@ import { Router } from '@angular/router';
 export class AuthGuard implements CanActivate {
 
   constructor(private toasterService:ToasterService, public router:Router){}
-  
+  private login_token = 'userToken';
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    
-      if (localStorage.getItem('userToken') != null) {
+      
+      
+      if(state.url == '/vender-dashboard'){
+          this.login_token = 'vendorToken';
+      }
+
+      
+      if (localStorage.getItem(this.login_token) != null) {
         return true;
       } else {
-        this.toasterService.Error('Please login first!!!');
-        localStorage.removeItem('userToken');
+        this.toasterService.Error('Please login first !!');
+        localStorage.removeItem(this.login_token);
         this.router.navigate(['/']);
         return false;
       }
