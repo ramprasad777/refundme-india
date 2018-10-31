@@ -61,7 +61,8 @@ const appRoutes: Routes = [
             {path: 'my-staff', component: VenderDashboardMyStaffComponent },
             {path: 'invoicing', component: VenderDashboardInvoicingComponent },
             {path: 'reporting', component: VenderDashboardReportingComponent },
-            {path: 'system-settings', component: VenderDashboardSystemSettingsComponent }
+            {path: 'system-settings', component: VenderDashboardSystemSettingsComponent },
+            {path: '', redirectTo: '/vender-dashboard/welcome', pathMatch:'full'}
         ]
     },
     {path: '', redirectTo: '/home', pathMatch:'full'},

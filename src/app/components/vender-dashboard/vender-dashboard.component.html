@@ -1,17 +1,44 @@
 <section class="vender-dashboard">
-	<div class="row">
-		<div class="col-sm-2 dashboardSidebar">
-			<ul class="dashboardSidebarMenu">
-				<li [routerLinkActive]="['active']"><a routerLink="./services">Services/Menu</a></li>
-				<li [routerLinkActive]="['active']"><a routerLink="./manage-bookings">Manage Bookings</a></li>
-				<li [routerLinkActive]="['active']"><a routerLink="./my-staff">My Staff</a></li>
-				<li [routerLinkActive]="['active']"><a routerLink="./invoicing">Invoicing</a></li>
-				<li [routerLinkActive]="['active']"><a routerLink="./reporting">Reporting</a></li>
-				<li [routerLinkActive]="['active']"><a routerLink="./system-settings">System Settings</a></li>
-			</ul>
-		</div>
-		<div class="col-sm-10 main text-left">
-			<router-outlet></router-outlet>
+	<nav class="venderDashboardHeader">
+	  	<div class="container-fluid">
+	    	<div class="col-xs-12 col-sm-2">
+	    		<a class="venderLogo" href="#">Vender logo</a>
+	    	</div>
+	    	<div id="" class="col-xs-12 col-sm-10">
+	    		<ul class="venderDashboardHeaderRight">
+	        		<li>Last Login: Wednesday, 31 Oct 2018 at 11:30 AM</li>
+	        		<li><a href="#">Logout</a></li>
+	      		</ul>
+	    	</div>
+	  	</div>
+	</nav>
+	<div class="container-fluid dashboardBody">
+		<div class="row">
+			<div class="col-xs-12 col-lg-2">
+				<div class="row">
+					<div class="dashboardSidebar">
+						<ul class="dashboardSidebarMenu">
+							<li [routerLinkActive]="['active']"><a routerLink="./services">Services/Menu</a></li>
+							<li [routerLinkActive]="['active']">
+								<a routerLink="./manage-bookings" is-open="true">Manage Bookings</a>
+								<ul>
+									<li><a href="#">Upcoming Bookings</a></li>
+									<li><a href="#">Manage Bookings</a></li>
+								</ul>
+							</li>
+							<li [routerLinkActive]="['active']"><a routerLink="./my-staff">My Staff</a></li>
+							<li [routerLinkActive]="['active']"><a routerLink="./invoicing">Invoicing</a></li>
+							<li [routerLinkActive]="['active']"><a routerLink="./reporting">Reporting</a></li>
+							<li [routerLinkActive]="['active']"><a routerLink="./system-settings">System Settings</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-lg-10">
+				<div class="">
+					<router-outlet></router-outlet>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
