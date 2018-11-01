@@ -571,6 +571,9 @@ p {
   .ourServices:nth-child(3n+4) {
     clear: left; } }
 
+.vender-dashboard {
+  padding: 0; }
+
 @media only screen and (min-width: 1199px) {
   .bannerContainer h2 {
     position: absolute;
@@ -604,7 +607,7 @@ p {
     transform: skew(0, 0deg);
     max-width: inherit; }
   .mainFooterTabsSection .footer1, .mainFooterSection .footer1 {
-    overflow: scroll;
+    overflow-x: scroll;
     width: 100%; }
   .ten-columns {
     width: max-content; }

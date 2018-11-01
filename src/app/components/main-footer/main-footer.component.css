@@ -2,6 +2,8 @@
 	background:#20313f;
 	padding:0;
 	border-top:5px solid rgba(33,33,33,.6);
+	position: relative;
+	z-index: 2;
 }
 ul.tabs {
 	margin: 0;

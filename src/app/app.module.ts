@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes} from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from "@angular/http";
+import 'rxjs/Rx';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,32 +23,51 @@ import { PressReleaseComponent } from './components/press-release/press-release.
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { LoginSignupComponent } from './components/login-signup/login-signup.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule, Routes} from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from "@angular/http";
 import { KnowYourRightsComponent } from './components/know-your-rights/know-your-rights.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { SharedService } from './shared.service';
 import { ToasterService } from './toaster.service';
 import { AuthGuard } from './auth.guard';
-import 'rxjs/Rx';
 import { VendorsComponent } from './components/vendors/vendors.component';
 import { VendorDetailFormComponent } from './components/vendor-detail-form/vendor-detail-form.component';
 import { VenderServicesComponent } from './components/vender-services/vender-services.component';
 import { FlightEnquiryComponent } from './components/flight-enquiry/flight-enquiry.component';
 import { VenderDashboardComponent } from './components/vender-dashboard/vender-dashboard.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+import { VenderDashboardWelcomeComponent } from './components/vender-dashboard/vender-dashboard-welcome/vender-dashboard-welcome.component';
+import { VenderDashboardServicesComponent } from './components/vender-dashboard/vender-dashboard-services/vender-dashboard-services.component';
+import { VenderDashboardManageBookingsComponent } from './components/vender-dashboard/vender-dashboard-manage-bookings/vender-dashboard-manage-bookings.component';
+import { VenderDashboardMyStaffComponent } from './components/vender-dashboard/vender-dashboard-my-staff/vender-dashboard-my-staff.component';
+import { VenderDashboardInvoicingComponent } from './components/vender-dashboard/vender-dashboard-invoicing/vender-dashboard-invoicing.component';
+import { VenderDashboardReportingComponent } from './components/vender-dashboard/vender-dashboard-reporting/vender-dashboard-reporting.component';
+import { VenderDashboardSystemSettingsComponent } from './components/vender-dashboard/vender-dashboard-system-settings/vender-dashboard-system-settings.component';
 
 
 
 const appRoutes: Routes = [
-  {path: 'home', component:HomeComponent},
-  {path:'Login-Signup',component:LoginSignupComponent },
-  {path:'know-your-rights',component:KnowYourRightsComponent },
-  {path:'contact-us',component:ContactUsComponent },
-  {path:'vendors',component:VendorsComponent },
-  {path:'vender-dashboard',canActivate : [AuthGuard], component:VenderDashboardComponent },
-  {path: '', redirectTo: '/home', pathMatch:'full'},
-  {path: '**', redirectTo: '/home', pathMatch:'full'}
+
+    {path: 'home', component:HomeComponent},
+    {path:'Login-Signup',component:LoginSignupComponent },
+    {path:'know-your-rights',component:KnowYourRightsComponent },
+    {path:'contact-us',component:ContactUsComponent },
+    {path:'venders',component:VendorsComponent },
+    {
+        path:'vender-dashboard',
+        component:VenderDashboardComponent,
+        children:[
+            {path: 'welcome', component: VenderDashboardWelcomeComponent },
+            {path: 'services', component: VenderDashboardServicesComponent },
+            {path: 'manage-bookings', component: VenderDashboardManageBookingsComponent },
+            {path: 'my-staff', component: VenderDashboardMyStaffComponent },
+            {path: 'invoicing', component: VenderDashboardInvoicingComponent },
+            {path: 'reporting', component: VenderDashboardReportingComponent },
+            {path: 'system-settings', component: VenderDashboardSystemSettingsComponent },
+            {path: '', redirectTo: '/vender-dashboard/welcome', pathMatch:'full'}
+        ]
+    },
+    {path: '', redirectTo: '/home', pathMatch:'full'},
+    {path: '**', component:PageNotFoundComponent}
 ]
 
 @NgModule({
@@ -70,7 +94,15 @@ const appRoutes: Routes = [
     VendorDetailFormComponent,
     VenderServicesComponent,
     FlightEnquiryComponent,
-    VenderDashboardComponent
+    PageNotFoundComponent,
+    VenderDashboardComponent,
+    VenderDashboardWelcomeComponent,
+    VenderDashboardServicesComponent,
+    VenderDashboardManageBookingsComponent,
+    VenderDashboardMyStaffComponent,
+    VenderDashboardInvoicingComponent,
+    VenderDashboardReportingComponent,
+    VenderDashboardSystemSettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -102,7 +134,15 @@ const appRoutes: Routes = [
     VendorsComponent,
     VenderServicesComponent,
     FlightEnquiryComponent,
-    VenderDashboardComponent
+    PageNotFoundComponent,
+    VenderDashboardComponent,
+    VenderDashboardWelcomeComponent,
+    VenderDashboardServicesComponent,
+    VenderDashboardManageBookingsComponent,
+    VenderDashboardMyStaffComponent,
+    VenderDashboardInvoicingComponent,
+    VenderDashboardReportingComponent,
+    VenderDashboardSystemSettingsComponent
     ]
 })
 export class AppModule { }
