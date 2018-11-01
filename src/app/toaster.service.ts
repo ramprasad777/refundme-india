@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 declare var toastr: any
+
 @Injectable({
   providedIn: 'root'
 })

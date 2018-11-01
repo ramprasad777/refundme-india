@@ -46,8 +46,8 @@ import { VenderUpcomingBookingsComponent } from './components/vender-dashboard/v
 import { VenderDashboardCompletedBookingsComponent } from './components/vender-dashboard/vender-dashboard-completed-bookings/vender-dashboard-completed-bookings.component';
 
 
-
 const appRoutes: Routes = [
+
     {path: 'home', component:HomeComponent},
     {path:'Login-Signup',component:LoginSignupComponent },
     {path:'know-your-rights',component:KnowYourRightsComponent },
@@ -55,6 +55,7 @@ const appRoutes: Routes = [
     {path:'venders',component:VendorsComponent },
     {
         path:'vender-dashboard',
+        canActivate : [AuthGuard],
         component:VenderDashboardComponent,
         children:[
             {path: 'welcome', component: VenderDashboardWelcomeComponent },
