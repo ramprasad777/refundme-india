@@ -14,9 +14,8 @@ export class AuthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-      
-      
-      if(state.url == '/vender-dashboard'){
+      let urlSegments = state.url.split('/');
+      if(urlSegments[1] == 'vender-dashboard'){
           this.login_token = 'vendorToken';
       }
 
@@ -24,7 +23,7 @@ export class AuthGuard implements CanActivate {
       if (localStorage.getItem(this.login_token) != null) {
         return true;
       } else {
-        this.toasterService.Error('Please login first !!');
+        this.toasterService.Error('Please login !');
         localStorage.removeItem(this.login_token);
         this.router.navigate(['/']);
         return false;

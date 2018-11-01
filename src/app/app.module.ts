@@ -44,7 +44,6 @@ import { VenderDashboardReportingComponent } from './components/vender-dashboard
 import { VenderDashboardSystemSettingsComponent } from './components/vender-dashboard/vender-dashboard-system-settings/vender-dashboard-system-settings.component';
 
 
-
 const appRoutes: Routes = [
 
     {path: 'home', component:HomeComponent},
@@ -54,6 +53,7 @@ const appRoutes: Routes = [
     {path:'venders',component:VendorsComponent },
     {
         path:'vender-dashboard',
+        canActivate : [AuthGuard],
         component:VenderDashboardComponent,
         children:[
             {path: 'welcome', component: VenderDashboardWelcomeComponent },

@@ -1,6 +1,7 @@
 import { Injectable, Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from  '@angular/http';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 import { Router, NavigationEnd } from '@angular/router';
 import { SharedService } from '../../shared.service';
 import { ToasterService } from '../../toaster.service';
@@ -13,14 +14,15 @@ import { AuthGuard } from '../../auth.guard';
 })
 export class VendorDetailFormComponent implements OnInit {
 
+	env = environment;
+
   	venderLoginForm: FormGroup;
   	post:any;       
   	venderEmail:string = '';
     venderPassword:string = '';
     venderEmailAlert:string = 'Username required.';
 	venderpasswordAlert:string = 'Password required.';
-	isVendorLoggedIn = false;
-
+	
   	constructor(public sr: SharedService, private toasterService:ToasterService, private http: Http, private router: Router,private fb: FormBuilder) { 
 		this.venderLoginForm = fb.group({
 			'venderEmail' : new FormControl('', Validators.compose([
@@ -47,10 +49,10 @@ export class VendorDetailFormComponent implements OnInit {
 				this.toasterService.Success(res_data.message);
 				this.venderLoginForm.reset();
 				localStorage.setItem('vendorToken', res_data.data.token);
-				this.isVendorLoggedIn = true;
+				this.env.isVendorLoggedIn = true;
 				if (localStorage.getItem('vendorToken') != null) {
-					this.isVendorLoggedIn = true;
-					this.router.navigate(['/vender-dashboard']);
+					this.env.isVendorLoggedIn = true;
+					this.router.navigate(['/vender-dashboard/welcome']);
 				}
 			}
 		});

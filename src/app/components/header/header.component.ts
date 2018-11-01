@@ -2,6 +2,7 @@ import { Injectable, Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from  '@angular/http';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router, NavigationEnd } from '@angular/router';
+import { environment } from '../../../environments/environment';
 import { SharedService } from '../../shared.service';
 import { ToasterService } from '../../toaster.service';
 import { AuthGuard } from '../../auth.guard';
@@ -12,7 +13,8 @@ import { AuthGuard } from '../../auth.guard';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+	env = environment;
+	
 	signupForm: FormGroup;
 	post2:any;       
   	Username:string = '';
@@ -30,7 +32,6 @@ export class HeaderComponent implements OnInit {
     password:string = '';
     emailAlert:string = 'Email required.';
 	passwordAlert:string = 'Password required.';
-	isLoggedIn = false;
 
   	constructor(public sr: SharedService, private toasterService:ToasterService, private http: Http, private router: Router,private fb: FormBuilder) { 
 		this.loginForm = fb.group({
@@ -93,9 +94,9 @@ export class HeaderComponent implements OnInit {
 				this.loginForm.reset();
 				document.getElementById('modalLogin').click();
 				localStorage.setItem('userToken', res_data.data.token);
-				this.isLoggedIn = true;
+				this.env.isLoggedIn = true;
 				if (localStorage.getItem('userToken') != null) {
-					this.isLoggedIn = true;
+					this.env.isLoggedIn = true;
 				}
 			}
 
@@ -104,7 +105,7 @@ export class HeaderComponent implements OnInit {
 
 	logout() {
 		localStorage.removeItem('userToken');
-		this.isLoggedIn = false;
+		this.env.isLoggedIn = true;
 		this.router.navigate(['/']);
 	}
 
