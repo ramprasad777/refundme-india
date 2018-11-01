@@ -20,10 +20,10 @@
 						<ul class="dashboardSidebarMenu">
 							<li [routerLinkActive]="['active']"><a routerLink="./services">Services/Menu</a></li>
 							<li [routerLinkActive]="['active']">
-								<a routerLink="./manage-bookings" is-open="true">Manage Bookings</a>
-								<ul>
-									<li><a href="#">Upcoming Bookings</a></li>
-									<li><a href="#">Manage Bookings</a></li>
+								<a href="#" class="toggle">Manage Bookings</a>
+								<ul class="inner">
+									<li [routerLinkActive]="['active']"><a routerLink="./vender-upcoming-bookings">Upcoming Bookings</a></li>
+									<li [routerLinkActive]="['active']"><a routerLink="./vender-completed-bookings">Completed Bookings</a></li>
 								</ul>
 							</li>
 							<li [routerLinkActive]="['active']"><a routerLink="./my-staff">My Staff</a></li>

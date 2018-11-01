@@ -81,6 +81,17 @@ $(function () {
        to add border to right side
        of last tab */
     $('ul.tabs li').last().addClass("tab_last");
+
+    //Vender Dashboard Sidebar Accordian
+    $('.dashboardSidebarMenu li > a').click(function(e) {
+      e.preventDefault();
+      //$(e.target).next('ul').parent('li').siblings('li').children('ul').slideUp('fast');
+      //$(e.target).parent('ul').children('ul').slideUp('fast');
+      $(this).parent('li').siblings('li').children('ul').slideUp('fast');
+      
+      //Toggle open/close on the <div> after the <h3>, opening it if not open.
+      $(e.target).next('ul').slideToggle('fast');
+    });
     
 	
 });

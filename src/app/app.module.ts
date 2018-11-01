@@ -42,6 +42,8 @@ import { VenderDashboardMyStaffComponent } from './components/vender-dashboard/v
 import { VenderDashboardInvoicingComponent } from './components/vender-dashboard/vender-dashboard-invoicing/vender-dashboard-invoicing.component';
 import { VenderDashboardReportingComponent } from './components/vender-dashboard/vender-dashboard-reporting/vender-dashboard-reporting.component';
 import { VenderDashboardSystemSettingsComponent } from './components/vender-dashboard/vender-dashboard-system-settings/vender-dashboard-system-settings.component';
+import { VenderUpcomingBookingsComponent } from './components/vender-dashboard/vender-upcoming-bookings/vender-upcoming-bookings.component';
+import { VenderDashboardCompletedBookingsComponent } from './components/vender-dashboard/vender-dashboard-completed-bookings/vender-dashboard-completed-bookings.component';
 
 
 
@@ -57,7 +59,15 @@ const appRoutes: Routes = [
         children:[
             {path: 'welcome', component: VenderDashboardWelcomeComponent },
             {path: 'services', component: VenderDashboardServicesComponent },
-            {path: 'manage-bookings', component: VenderDashboardManageBookingsComponent },
+            {
+                path: 'manage-bookings',
+                component: VenderDashboardManageBookingsComponent,
+                /*children:[
+                    {path: 'vender-upcoming-bookings', component:VenderUpcomingBookingsComponent}
+                ]*/
+            },
+            {path: 'vender-upcoming-bookings', component:VenderUpcomingBookingsComponent},
+            {path: 'vender-completed-bookings', component:VenderDashboardCompletedBookingsComponent},
             {path: 'my-staff', component: VenderDashboardMyStaffComponent },
             {path: 'invoicing', component: VenderDashboardInvoicingComponent },
             {path: 'reporting', component: VenderDashboardReportingComponent },
@@ -67,7 +77,6 @@ const appRoutes: Routes = [
     },
     {path: '', redirectTo: '/home', pathMatch:'full'},
     {path: '**', component:PageNotFoundComponent}
-    
 ]
 
 @NgModule({
@@ -102,7 +111,9 @@ const appRoutes: Routes = [
     VenderDashboardMyStaffComponent,
     VenderDashboardInvoicingComponent,
     VenderDashboardReportingComponent,
-    VenderDashboardSystemSettingsComponent
+    VenderDashboardSystemSettingsComponent,
+    VenderUpcomingBookingsComponent,
+    VenderDashboardCompletedBookingsComponent
   ],
   imports: [
     BrowserModule,
@@ -142,7 +153,9 @@ const appRoutes: Routes = [
     VenderDashboardMyStaffComponent,
     VenderDashboardInvoicingComponent,
     VenderDashboardReportingComponent,
-    VenderDashboardSystemSettingsComponent
+    VenderDashboardSystemSettingsComponent,
+    VenderUpcomingBookingsComponent,
+    VenderDashboardCompletedBookingsComponent
     ]
 })
 export class AppModule { }

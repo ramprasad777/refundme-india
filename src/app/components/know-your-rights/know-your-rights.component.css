@@ -6,6 +6,9 @@
     background-size: cover;
     padding-bottom:20px;
 }
+.knowYourRightSection .ourServices a{
+	font-size:150%;
+}
 .ourServices{
 	font-size:90%;
 	text-align:center;
