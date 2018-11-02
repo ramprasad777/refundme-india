@@ -44,6 +44,7 @@ import { VenderDashboardReportingComponent } from './components/vender-dashboard
 import { VenderDashboardSystemSettingsComponent } from './components/vender-dashboard/vender-dashboard-system-settings/vender-dashboard-system-settings.component';
 import { VenderUpcomingBookingsComponent } from './components/vender-dashboard/vender-upcoming-bookings/vender-upcoming-bookings.component';
 import { VenderDashboardCompletedBookingsComponent } from './components/vender-dashboard/vender-dashboard-completed-bookings/vender-dashboard-completed-bookings.component';
+import { VenderDashboardHeaderComponent } from './components/vender-dashboard/vender-dashboard-header/vender-dashboard-header.component';
 
 
 const appRoutes: Routes = [
@@ -114,7 +115,8 @@ const appRoutes: Routes = [
     VenderDashboardReportingComponent,
     VenderDashboardSystemSettingsComponent,
     VenderUpcomingBookingsComponent,
-    VenderDashboardCompletedBookingsComponent
+    VenderDashboardCompletedBookingsComponent,
+    VenderDashboardHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -156,7 +158,8 @@ const appRoutes: Routes = [
     VenderDashboardReportingComponent,
     VenderDashboardSystemSettingsComponent,
     VenderUpcomingBookingsComponent,
-    VenderDashboardCompletedBookingsComponent
+    VenderDashboardCompletedBookingsComponent,
+    VenderDashboardHeaderComponent
     ]
 })
 export class AppModule { }

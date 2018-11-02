@@ -20,8 +20,8 @@ export class VendorDetailFormComponent implements OnInit {
   	post:any;       
   	venderEmail:string = '';
     venderPassword:string = '';
-    venderEmailAlert:string = 'Username required.';
-	venderpasswordAlert:string = 'Password required.';
+    venderEmailAlert:string = '';
+	venderpasswordAlert:string = '';
 	
   	constructor(public sr: SharedService, private toasterService:ToasterService, private http: Http, private router: Router,private fb: FormBuilder) { 
 		this.venderLoginForm = fb.group({

@@ -40,6 +40,11 @@ p{
 .mainSections{
   padding:20px 0 100px;
 }
+.dashboardBody{
+  .mainHeading{
+    color:#428bca;
+  }
+}
 .bodyContainer{
   text-align: center;
   .container{
@@ -106,10 +111,10 @@ p{
     color:#fff;
     background:rgba(195,11,11,.6);
     position:relative;
-    padding:3px 10px;
     font-size:90%;
-    top:-1px;
+    bottom:2px;
     border-radius:0;
+    height:0px;
   }
   .btn-default{
     background-color:transparent;
@@ -119,6 +124,20 @@ p{
     padding:10px 50px;
     font-size:150%;
     color:#fff;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border-bottom: 1px solid #ccc;
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
   }
 }
 
@@ -146,7 +165,7 @@ p{
     box-shadow:500px 0 0 #31708f inset;
     //border:1px solid #31708f;
     text-decoration:none;
-    color:#fff;
+    color:#fff!important;
 }
 .mainBtnWhite{
   background: #f1f1f1;
@@ -201,12 +220,12 @@ p{
 }
 
 //Start Main Navigation
-.mainNavigation{
+.mainNavigation, .dashBoardHeader{
   background:#fff;
   @include box-shadow(0px, 2px, 5px, 0px, rgba(0, 0, 0, 0.2));
   padding:20px 0;
 }
-.mainNavigation {
+.mainNavigation, .dashBoardHeader {
   .active{
     a{
       color: #10afd4;
@@ -234,6 +253,11 @@ p{
         }
       }
     }
+  }
+}
+.dashBoardHeader{
+  .navbar-brand{
+    padding:0 15px;
   }
 }
 
