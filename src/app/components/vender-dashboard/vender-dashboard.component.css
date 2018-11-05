@@ -133,12 +133,17 @@ ul .inner {
     width:100%;
   }
 }
+@media only screen and (min-width:768px){
+  .page-content{
+    margin-left:225px;
+  }
+}
 @media (min-width: 1200px) {
   .vender-dashboard{
     min-height:90vh;
     height:auto;
-    background: rgb(204,204,204);
-    background: linear-gradient(90deg, rgba(40,44,52,1) 0%, rgba(40,44,52,1) 16.6%, rgba(255,255,255,1) 16.6%, rgba(255,255,255,1) 100%);
+    /*background: rgb(204,204,204);
+    background: linear-gradient(90deg, rgba(40,44,52,1) 0%, rgba(40,44,52,1) 16.6%, rgba(255,255,255,1) 16.6%, rgba(255,255,255,1) 100%);*/
   }
   .dashboardSidebar {
     position: relative;
