@@ -1,0 +1,34 @@
+.sliderServicesSection{
+	background:#0eadca;
+}
+.sliderServicesSection .service{
+	color:#fff;
+	border:1px solid #fff;
+	padding:20px;
+}
+
+.sliderServicesSection .service{
+	color:#fff;
+	border-left:1px solid #fff;
+}
+.sliderServicesSection .service h3{
+	font-size:130%;
+}
+
+@media screen and (min-width:1200px){
+	.sliderServicesSection{
+		padding:20px;
+	}
+	.sliderServicesSection .service{
+		padding:0;
+		border:none;
+		border-left:1px solid #fff;
+		padding:0;
+	}
+	.sliderServicesSection .service:first-child{
+		border-left:none;
+	}
+	.sliderServicesSection .service{
+		border-left:1px solid #fff;
+	}
+}

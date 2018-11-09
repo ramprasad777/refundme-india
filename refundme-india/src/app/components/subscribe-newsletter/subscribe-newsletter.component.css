@@ -1,0 +1,58 @@
+.home-newsletter{
+	background:#f17776;
+}
+.home-newsletter .mainHeading2 {
+	color:#fff;
+}
+.home-newsletter .mainHeading2:after, .home-newsletter .mainHeading2 span:after {
+	background:none;
+}
+.home-newsletter .mainHeading2 span{
+	font-style: italic;
+}
+.home-newsletter {
+	background: #f17776;
+}
+
+.home-newsletter .single {
+	max-width: 750px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+.home-newsletter .single h2 {
+	font-size: 220%;
+	color: white;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+.home-newsletter .single h2 span{
+	letter-spacing: 0;
+}
+.home-newsletter .single .form-control {
+	height: 50px;
+	border: 1px solid #fff;
+	color:#fff;
+	font-size:18px;
+	background:transparent;
+	border-radius:0;
+	display: table-cell;
+}
+.home-newsletter .single .form-control::placeholder {
+	color: #fff;
+  	font-size: 1.2em;
+}
+.home-newsletter .single .form-control:focus {
+	box-shadow: none;
+	border-color: #fff;
+}
+.home-newsletter .single .btn {
+	min-height: 50px; 
+	background: #fff;
+	color: #f17776;
+	border-radius:0;
+	padding:10px 30px;
+	font-size:20px;
+}
