@@ -19,10 +19,10 @@ export class FlightEnquiryComponent implements OnInit {
     arrivalAirport:string = '';
     flightNumber:string = '';
     flightDate:string = '';
-    depatureAirportAlert:string = 'Departure Airport required.';
-	arrivalAirportAlert:string = 'Arrival Airport required.';
-	flightNumberAlert:string = 'Flight Number required.';
-	flightDateAlert:string = 'Flight Date required.';
+    depatureAirportAlert:string = '';
+	arrivalAirportAlert:string = '';
+	flightNumberAlert:string = '';
+	flightDateAlert:string = '';
 	isLoggedIn = false;
 
   	constructor(public sr: SharedService, private toasterService:ToasterService, private http: Http, private router: Router,private fb: FormBuilder) { 

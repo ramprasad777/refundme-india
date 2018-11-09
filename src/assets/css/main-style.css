@@ -254,6 +254,9 @@ p {
 .mainSections {
   padding: 20px 0 100px; }
 
+.dashboardBody .mainHeading {
+  color: #428bca; }
+
 .bodyContainer {
   text-align: center; }
   .bodyContainer .container {
@@ -319,10 +322,10 @@ p {
   color: #fff;
   background: rgba(195, 11, 11, 0.6);
   position: relative;
-  padding: 3px 10px;
   font-size: 90%;
-  top: -1px;
-  border-radius: 0; }
+  bottom: 2px;
+  border-radius: 0;
+  height: 0px; }
 
 .enquiryForm .btn-default {
   background-color: transparent; }
@@ -332,6 +335,20 @@ p {
   padding: 10px 50px;
   font-size: 150%;
   color: #fff; }
+
+.enquiryForm input:-webkit-autofill,
+.enquiryForm input:-webkit-autofill:hover,
+.enquiryForm input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+.enquiryForm textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+.enquiryForm select:-webkit-autofill,
+.enquiryForm select:-webkit-autofill:hover,
+.enquiryForm select:-webkit-autofill:focus {
+  border-bottom: 1px solid #ccc;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s; }
 
 .mainBtn, .mainBtnWhite {
   height: auto;
@@ -355,7 +372,7 @@ p {
 .mainBtn:hover {
   box-shadow: 500px 0 0 #31708f inset;
   text-decoration: none;
-  color: #fff; }
+  color: #fff !important; }
 
 .mainBtnWhite {
   background: #f1f1f1;
@@ -399,16 +416,16 @@ p {
     padding: 0;
     color: #f47822; }
 
-.mainNavigation {
+.mainNavigation, .dashBoardHeader {
   background: #fff;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
   padding: 20px 0; }
 
-.mainNavigation .active a {
+.mainNavigation .active a, .dashBoardHeader .active a {
   color: #10afd4; }
-  .mainNavigation .active a:after {
+  .mainNavigation .active a:after, .dashBoardHeader .active a:after {
     content: '';
     display: block;
     margin-top: 10px;
@@ -417,15 +434,18 @@ p {
     background: #10afd4;
     transition: width .3s; }
 
-.mainNavigation li a {
+.mainNavigation li a, .dashBoardHeader li a {
   font-family: 'Titillium-Web-Light';
   color: #5d5c5c;
   font-size: 130%; }
-  .mainNavigation li a:hover, .mainNavigation li a:focus {
+  .mainNavigation li a:hover, .mainNavigation li a:focus, .dashBoardHeader li a:hover, .dashBoardHeader li a:focus {
     color: #10afd4;
     background-color: transparent !important; }
-    .mainNavigation li a:hover:after, .mainNavigation li a:focus:after {
+    .mainNavigation li a:hover:after, .mainNavigation li a:focus:after, .dashBoardHeader li a:hover:after, .dashBoardHeader li a:focus:after {
       width: 100%; }
+
+.dashBoardHeader .navbar-brand {
+  padding: 0 15px; }
 
 .bannerContainer h2 {
   color: #fff;
