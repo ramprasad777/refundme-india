@@ -15,7 +15,6 @@ export class VenderDashboardHeaderComponent implements OnInit {
   }
 
   vendorlogout() {
-    alert('inside logout function');
     localStorage.removeItem('vendorToken');
     this.env.isVendorLoggedIn = false;
     this.router.navigate(['/']);
