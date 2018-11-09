@@ -14,12 +14,4 @@ export class VenderDashboardComponent implements OnInit {
   ngOnInit() {
   }
 
-  vendorlogout(){
-
-    localStorage.removeItem('vendorToken');
-		this.env.isVendorLoggedIn = false;
-		this.router.navigate(['/']);
-
-  }
-
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-vender-dashboard-header',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vender-dashboard-header.component.css']
 })
 export class VenderDashboardHeaderComponent implements OnInit {
-
-  constructor() { }
+  env = environment;
+  constructor(public router: Router) { }
 
   ngOnInit() {
+  }
+
+  vendorlogout() {
+    alert('inside logout function');
+    localStorage.removeItem('vendorToken');
+    this.env.isVendorLoggedIn = false;
+    this.router.navigate(['/']);
+
   }
 
 }
