@@ -97,6 +97,9 @@ $(function () {
     //var $trigger = $("#loginToggle");
     $("#loginToggle").removeClass("in");
   });
+
+  //Tootlip
+  $('[data-toggle="tooltip"]').tooltip(); 
 	
 });
 $(window).resize(function(){
