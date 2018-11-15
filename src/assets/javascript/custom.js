@@ -92,7 +92,11 @@ $(function () {
       //Toggle open/close on the <div> after the <h3>, opening it if not open.
       $(e.target).next('ul').slideToggle('fast');
     });
-    
+  
+  $('.panel ul li').on("click", function(event){
+    //var $trigger = $("#loginToggle");
+    $("#loginToggle").removeClass("in");
+  });
 	
 });
 $(window).resize(function(){
@@ -105,12 +109,13 @@ $(window).resize(function(){
     }
 });
 $(document).ready(function(){
-  $("#navbar").find("li").on("click", "a", function () {
-     $('.navbar-collapse.in').collapse('hide');
-     $('#navbar-hamburger').toggleClass('hidden');
-    $('#navbar-close').toggleClass('hidden');  
- });
- if ($(window).width() > 768) {
+  $("#navbar").find("li:not('li.panel')").on("click", "a", function () {
+    $('.navbar-collapse.in').collapse('hide');
+    $('#navbar-hamburger').toggleClass('hidden');
+    $('#navbar-close').toggleClass('hidden');
+  });
+  if ($(window).width() > 768) {
     $('.navbar-collapse.in').collapse('show');
- }
+  }
 })
+

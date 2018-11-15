@@ -8,7 +8,7 @@ html, body {
     overflow-x: hidden;
 }
 body {
-    font-family:'Titillium-Web-Regular', sans-serif;
+    font-family:'Titillium-Web-Regular', sans-serif!important;
     font-size: 16px;
     line-height: 1.42857143;
     color: #333;
@@ -27,6 +27,8 @@ p{
 //Enquiry Form
 .enquiryForm label{
   font-family:'Titillium-Web-Thin', sans-serif;
+  font-size:110%;
+  color:#c1bfbf;
 }
 .navbar-toggle .icon-bar{
   background-color:#ccc;
@@ -317,7 +319,7 @@ p{
   position: absolute;
   top: 25px;
   left: 0px;
-  color: #909090;
+  color: #c1bfbf;
   width:100%;
   text-align: left;
   -webkit-transform: translate3d(0, 0, 0);
@@ -423,9 +425,9 @@ p{
 
 @media only screen and (min-width:1199px){
   .bannerContainer h2{
-    position:absolute;
+    /*position:absolute;
     left:0;right:0;top:50px;
-    z-index:1;
+    z-index:1;*/
   }
   .descriptionContent{
     margin-bottom:0;
