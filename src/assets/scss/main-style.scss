@@ -420,6 +420,17 @@ p{
 .vender-dashboard{
   padding:0;
 }
+.tabsInline{
+  margin:0 auto;
+  width:auto!important;
+  display:inline-table!important;
+  border:1px solid #ccc;
+  @include border-radius(5px);
+  a{
+    @include border-radius(0px!important);
+    border:none;
+  }
+}
 
 
 

@@ -596,6 +596,22 @@ textarea:-webkit-autofill:focus,
 .vender-dashboard {
   padding: 0; }
 
+.tabsInline {
+  margin: 0 auto;
+  width: auto !important;
+  display: inline-table !important;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */ }
+  .tabsInline a {
+    -webkit-border-radius: 0px !important;
+    border-radius: 0px !important;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    border: none; }
+
 @media only screen and (min-width: 1199px) {
   .bannerContainer h2 {
     /*position:absolute;
