@@ -417,6 +417,22 @@ p{
 }
 
 //Start Vender's
+.vendorLoggedIn{
+  .mainFooterTabsSection{
+    display:none;
+  }
+  .mainFooterSection{
+    .footer-top{
+      display:none;
+    }
+  }
+  .mainNavigation{
+    display:none;
+  }
+  .footer-bottom{
+    border-top:1px solid #ccc;
+  }
+}
 .vender-dashboard{
   padding:0;
 }

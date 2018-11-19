@@ -593,6 +593,18 @@ textarea:-webkit-autofill:focus,
   .ourServices:nth-child(3n+4) {
     clear: left; } }
 
+.vendorLoggedIn .mainFooterTabsSection {
+  display: none; }
+
+.vendorLoggedIn .mainFooterSection .footer-top {
+  display: none; }
+
+.vendorLoggedIn .mainNavigation {
+  display: none; }
+
+.vendorLoggedIn .footer-bottom {
+  border-top: 1px solid #ccc; }
+
 .vender-dashboard {
   padding: 0; }
 
