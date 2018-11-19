@@ -99,7 +99,15 @@ $(function () {
   });
 
   //Tootlip
-  $('[data-toggle="tooltip"]').tooltip(); 
+  $('[data-toggle="tooltip"]').tooltip();
+
+  //read more read less
+  $(".moreData").hide();
+  $('.show_hide').on('click', function(){
+    var txt = $(".moreData").is(':visible') ? 'More' : 'Less';
+    $(".show_hide").text(txt);
+    $('.moreData').slideToggle(200);
+  });
 	
 });
 $(window).resize(function(){

@@ -1,123 +1,266 @@
 <section class="mainSections">
 	<div class="row">
 		<div class="col-xs-12 col-md-8">
-			<h3>Booking Summary</h3>
-			<div class="container-fluid">
-				<ul id="myTabs" class="nav nav-pills btn-group tabsInline" role="tablist" data-tabs="tabs">
-					<li class="active span4"><a href="#today" class="btn" data-toggle="tab">Today</a></li>
-					<li class="span4"><a href="#yesterday" class="btn" data-toggle="tab">Yesterday</a></li>
-					<li class="span4"><a href="#week" class="btn" data-toggle="tab">This Week</a></li>
-					<li class="span4"><a href="#month" class="btn" data-toggle="tab">This Month</a></li>
-				</ul>
-				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane orderPanelData fade in active" id="today">
-						<div class="card-footer">
-			                <div class="row">
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 18</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Delievered Orderes <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Cancelled Orderes <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                </div>
-			            </div>
+			<div class="row">
+				<!--Booking Summary-->
+				<div class="col-xs-12 bookingSummary">
+					<h3>Booking Summary</h3>
+					<div class="container-fluid">
+						<ul id="bookingSummaryTabs" class="nav nav-pills btn-group tabsInline" role="tablist" data-tabs="tabs">
+							<li class="active span4"><a href="#today" class="btn" data-toggle="tab">Today</a></li>
+							<li class="span4"><a href="#yesterday" class="btn" data-toggle="tab">Yesterday</a></li>
+							<li class="span4"><a href="#week" class="btn" data-toggle="tab">This Week</a></li>
+							<li class="span4"><a href="#month" class="btn" data-toggle="tab">This Month</a></li>
+						</ul>
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane orderPanelData fade in active" id="today">
+								<div class="card-footer">
+					                <div class="row">
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">18</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Upcoming Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">12</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">4</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 5000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 300</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">0</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                </div>
+					            </div>
+							</div>
+							<div role="tabpanel" class="tab-pane orderPanelData fade" id="yesterday">
+								<div class="card-footer">
+					                <div class="row">
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">12</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Upcoming Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">12</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">3</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 5000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 300</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">0</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                </div>
+					            </div>
+							</div>
+							<div role="tabpanel" class="tab-pane orderPanelData fade" id="week">
+								<div class="card-footer">
+					                <div class="row">
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">58</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Upcoming Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">22</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">10</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 50000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 3000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">0</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                </div>
+					            </div>
+							</div>
+							<div role="tabpanel" class="tab-pane orderPanelData fade" id="month">
+								<div class="card-footer">
+					                <div class="row">
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">180</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Upcoming Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">120</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">40</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 50000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 3000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">0</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                </div>
+					            </div>
+							</div>
+						</div>
 					</div>
-					<div role="tabpanel" class="tab-pane orderPanelData fade" id="yesterday">
-						<div class="card-footer">
-			                <div class="row">
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Delievered Orderes <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Cancelled Orderes <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                </div>
-			            </div>
-					</div>
-					<div role="tabpanel" class="tab-pane orderPanelData fade" id="week">
-						<div class="card-footer">
-			                <div class="row">
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Delievered Orderes <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Cancelled Orderes <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                </div>
-			            </div>
-					</div>
-					<div role="tabpanel" class="tab-pane orderPanelData fade" id="month">
-						<div class="card-footer">
-			                <div class="row">
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Delievered Orderes <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-6 text-xs-center">
-			                        <span class="text-muted informationText">Cancelled Orderes <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                </div>
-			            </div>
+				</div>
+				<!--Trends Graphs-->
+				<div class="col-xs-12 trendingSummary">
+					<h3>Trending Summary</h3>
+					<div class="container-fluid">
+						<ul id="trendingSummaryTabs" class="nav nav-pills btn-group tabsInline" role="tablist" data-tabs="tabs">
+							<li class="active span4"><a href="#trendingRevenue" class="btn" data-toggle="tab">Revenue</a></li>
+							<li class="span4"><a href="#trendingDelieveredOrders" class="btn" data-toggle="tab">Delievered Orders</a></li>
+							<li class="span4"><a href="#trendingRevenueLoss" class="btn" data-toggle="tab">Revenue Loss</a></li>
+							<li class="span4"><a href="#trendingCancelledOrders" class="btn" data-toggle="tab">Cancelled Orders</a></li>
+						</ul>
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane orderPanelData fade in active" id="trendingRevenue">
+				                <div class="row">
+				                    <div class="flot-chart">
+		                                <div class="flot-chart-content" id="flot-bar-chart"></div>
+		                            </div>
+				                </div>
+							</div>
+							<div role="tabpanel" class="tab-pane orderPanelData fade" id="trendingDelieveredOrders">
+								<div class="flot-chart">
+	                                <div class="flot-chart-content" id="flot-pie-chart"></div>
+	                            </div>
+							</div>
+							<div role="tabpanel" class="tab-pane orderPanelData fade" id="trendingRevenueLoss">
+								<div class="card-footer">
+					                <div class="row">
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">58</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Upcoming Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">22</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">10</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 50000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 3000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">0</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                </div>
+					            </div>
+							</div>
+							<div role="tabpanel" class="tab-pane orderPanelData fade" id="trendingCancelledOrders">
+								<div class="card-footer">
+					                <div class="row">
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">180</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Upcoming Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">120</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">40</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 50000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 3000</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                    <div class="col-xs-4 text-xs-center">
+					                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+					                        <h2 class="block font-weight-normal mainText">0</h2>
+					                        <span class="text-muted">no change</span>                        
+					                    </div>
+					                </div>
+					            </div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-12 col-md-4">
+		<div class="col-xs-12 col-md-4 venderProfileBlock">
 			<h3>Vendor Profile</h3>
 			<ul class="list-group text-left">
 		    	<li class="list-group-item row">
@@ -132,6 +275,37 @@
 		          	<div class="col-md-3">First Name</div>
 		          	<div class="col-md-9"><strong>Ram</strong></div>
 		      	</li>
+		      	<div class="moreData">
+		          	<li class="list-group-item row">
+	          			<div class="col-md-3">Last Name</div>
+	          			<div class="col-md-9"><strong>AA 666</strong></div>
+	          		</li>
+	          		<li class="list-group-item row">
+	          			<div class="col-md-3">Company Name</div>
+	          			<div class="col-md-9"><strong>Fast Assistance</strong></div>
+	          		</li>
+	          		<li class="list-group-item row">
+	          			<div class="col-md-3">GSTIN No.</div>
+	          			<div class="col-md-9"><strong>GHSL93</strong></div>
+	          		</li>
+	          		<li class="list-group-item row">
+	          			<div class="col-md-3">PAN No.</div>
+	          			<div class="col-md-9"><strong>PAND9393S</strong></div>
+	          		</li>
+	          		<li class="list-group-item row">
+	          			<div class="col-md-3">Job Title</div>
+	          			<div class="col-md-9"><strong>Manager</strong></div>
+	          		</li>
+	          		<li class="list-group-item row">
+	          			<div class="col-md-3">Email</div>
+	          			<div class="col-md-9"><strong>harry_kane@gmail.com</strong></div>
+	          		</li>
+	          		<li class="list-group-item row">
+	          			<div class="col-md-3">Contact No.</div>
+	          			<div class="col-md-9"><strong>9393939393</strong></div>
+	          		</li>
+		      	</div>
+		      	<span class="show_hide" data-content="toggle-text">More</span>
 		  	</ul>
 		</div>
 	</div>

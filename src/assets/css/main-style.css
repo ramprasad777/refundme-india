@@ -603,7 +603,8 @@ textarea:-webkit-autofill:focus,
   display: none; }
 
 .vendorLoggedIn .footer-bottom {
-  border-top: 1px solid #ccc; }
+  border-top: 1px solid #ccc;
+  padding: 0 !important; }
 
 .vender-dashboard {
   padding: 0; }

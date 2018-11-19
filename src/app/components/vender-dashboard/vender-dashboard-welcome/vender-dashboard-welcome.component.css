@@ -14,3 +14,13 @@
 	color:#337ab7;
 	font-size:36px;
 }
+.venderProfileBlock ul li{
+
+}
+.show_hide{
+	text-align:center;
+	display: block;
+	padding:10px;
+	color:#337ab7;
+	cursor: pointer;
+}
