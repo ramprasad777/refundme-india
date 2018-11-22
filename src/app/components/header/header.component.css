@@ -109,6 +109,7 @@
 .loginDropdown{
     border:none;
     box-shadow: none;
+    cursor: pointer;
 }
 .loginDropdown li a{
     background:none;

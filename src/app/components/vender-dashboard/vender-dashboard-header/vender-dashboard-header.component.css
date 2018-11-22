@@ -103,6 +103,9 @@
 		background-color: none;
 		color:#54677A!important;
 	}
+  .venderDashboardRightNav > li.active a:hover, .venderDashboardRightNav > li a:focus{
+    color:#fff!important;
+  }
 }
 
 /* New */
