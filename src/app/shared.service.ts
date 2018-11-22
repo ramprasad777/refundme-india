@@ -168,10 +168,10 @@ export class SharedService {
   }
 
 
-  /* ######################### Vender Login Form ######################### */
+  /* ######################### Vendor Login Form ######################### */
 
-  venderLogin(param) {
-    console.log('inside venderLogin shared service');
+  vendorLogin(param) {
+    console.log('inside vendorLogin shared service');
     let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     let options = new RequestOptions({ headers: headers });

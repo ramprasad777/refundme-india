@@ -82,7 +82,7 @@ $(function () {
        of last tab */
     $('ul.tabs li').last().addClass("tab_last");
 
-    //Vender Dashboard Sidebar Accordian
+    //Vendor Dashboard Sidebar Accordian
     $('.dashboardSidebarMenu li > a').click(function(e) {
       e.preventDefault();
       //$(e.target).next('ul').parent('li').siblings('li').children('ul').slideUp('fast');

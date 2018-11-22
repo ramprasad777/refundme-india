@@ -16,43 +16,43 @@ export class VendorDetailFormComponent implements OnInit {
 	isVendorLoggedIn:boolean=false;
 	isLoggedIn:boolean=false;
 
-  	venderLoginForm: FormGroup;
+  	vendorLoginForm: FormGroup;
   	post:any;       
-  	venderEmail:string = '';
-    venderPassword:string = '';
-    venderEmailAlert:string = '';
-	venderpasswordAlert:string = '';
+  	vendorEmail:string = '';
+    vendorPassword:string = '';
+    vendorEmailAlert:string = '';
+	vendorpasswordAlert:string = '';
 	
   	constructor(public sr: SharedService, private toasterService:ToasterService, private http: Http, private router: Router,private fb: FormBuilder) { 
-		this.venderLoginForm = fb.group({
-			'venderEmail' : new FormControl('', Validators.compose([
+		this.vendorLoginForm = fb.group({
+			'vendorEmail' : new FormControl('', Validators.compose([
 				Validators.required,
 				Validators.minLength(5)
 			])),
-			'venderPassword' : [null, Validators.required],
+			'vendorPassword' : [null, Validators.required],
 			'api_type' : 'vendor_login'
 		});
 	}
 
-	venderLogin(data) {
+	vendorLogin(data) {
 		
 		this.toasterService.Info('Please wait...');
 		if (data.api_type == null) {
 			data.api_type = 'vendor_login'
 		}
 
-		this.sr.venderLogin(data).subscribe(res_data => {
+		this.sr.vendorLogin(data).subscribe(res_data => {
 			this.toasterService.Clear();
 			if (res_data.result == 'error') {
 				this.toasterService.Error(res_data.message);
 			} else if (res_data.result == 'success') {
 				this.toasterService.Success(res_data.message);
-				this.venderLoginForm.reset();
+				this.vendorLoginForm.reset();
 				localStorage.setItem('vendorToken', res_data.data.token);
 				this.isVendorLoggedIn = true;
 				if (localStorage.getItem('vendorToken') != null) {
 					this.isVendorLoggedIn = true;
-					this.router.navigate(['/vender-dashboard/welcome']);
+					this.router.navigate(['/vendor-dashboard/welcome']);
 				}
 			}
 		});

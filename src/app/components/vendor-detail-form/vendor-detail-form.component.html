@@ -17,20 +17,20 @@
 							<h2>Vendor Login</h2>
 						</div>
 					</div>
-					<form class="form-label form-css-label" [formGroup]="venderLoginForm" (ngSubmit)="venderLogin(venderLoginForm.value)">
+					<form class="form-label form-css-label" [formGroup]="vendorLoginForm" (ngSubmit)="vendorLogin(vendorLoginForm.value)">
 					    <fieldset>
-					      	<input formControlName="venderEmail" id="venderEmail" name="venderEmail" type="text" required />
-					      	<label for="venderEmail">User Name</label>
+					      	<input formControlName="vendorEmail" id="vendorEmail" name="vendorEmail" type="text" required />
+					      	<label for="vendorEmail">User Name</label>
 					      	<span class="enquiryFormIcon"><i class="fa fa-user"></i></span>
-					      	<div class="alert p-0" *ngIf="!venderLoginForm.controls['venderEmail'].valid && venderLoginForm.controls['venderEmail'].touched">{{ venderEmailAlert }}</div>
+					      	<div class="alert p-0" *ngIf="!vendorLoginForm.controls['vendorEmail'].valid && vendorLoginForm.controls['vendorEmail'].touched">{{ vendorEmailAlert }}</div>
 					    </fieldset>
 					    <fieldset>
-					      	<input formControlName="venderPassword" id="venderPassword" name="venderPassword" type="password" required />
-					      	<label for="venderPassword">Password</label>
+					      	<input formControlName="vendorPassword" id="vendorPassword" name="vendorPassword" type="password" required />
+					      	<label for="vendorPassword">Password</label>
 					      	<span class="enquiryFormIcon"><i class="fa fa-lock"></i></span>
-                        	<div class="alert p-0" *ngIf="!venderLoginForm.controls['venderPassword'].valid && venderLoginForm.controls['venderPassword'].touched">{{ venderpasswordAlert }}</div>
+                        	<div class="alert p-0" *ngIf="!vendorLoginForm.controls['vendorPassword'].valid && vendorLoginForm.controls['vendorPassword'].touched">{{ vendorpasswordAlert }}</div>
 					    </fieldset>
-					    <button type="submit" class="btn btn-default button expanded loginSignupBtn mainBtn" [disabled]="!venderLoginForm.valid">Login</button>
+					    <button type="submit" class="btn btn-default button expanded loginSignupBtn mainBtn" [disabled]="!vendorLoginForm.valid">Login</button>
 					</form>
 				</div>
 			</div>

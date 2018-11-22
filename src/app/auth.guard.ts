@@ -15,7 +15,7 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       let urlSegments = state.url.split('/');
-      if(urlSegments[1] == 'vender-dashboard'){
+      if(urlSegments[1] == 'vendor-dashboard'){
           this.login_token = 'vendorToken';
       }
 

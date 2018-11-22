@@ -29,21 +29,21 @@ import { ToasterService } from './toaster.service';
 import { AuthGuard } from './auth.guard';
 import { VendorsComponent } from './components/vendors/vendors.component';
 import { VendorDetailFormComponent } from './components/vendor-detail-form/vendor-detail-form.component';
-import { VenderServicesComponent } from './components/vender-services/vender-services.component';
+import { VendorServicesComponent } from './components/vendor-services/vendor-services.component';
 import { FlightEnquiryComponent } from './components/flight-enquiry/flight-enquiry.component';
-import { VenderDashboardComponent } from './components/vender-dashboard/vender-dashboard.component';
+import { VendorDashboardComponent } from './components/vendor-dashboard/vendor-dashboard.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-import { VenderDashboardWelcomeComponent } from './components/vender-dashboard/vender-dashboard-welcome/vender-dashboard-welcome.component';
-import { VenderDashboardServicesComponent } from './components/vender-dashboard/vender-dashboard-services/vender-dashboard-services.component';
-import { VenderDashboardManageBookingsComponent } from './components/vender-dashboard/vender-dashboard-manage-bookings/vender-dashboard-manage-bookings.component';
-import { VenderDashboardMyStaffComponent } from './components/vender-dashboard/vender-dashboard-my-staff/vender-dashboard-my-staff.component';
-import { VenderDashboardInvoicingComponent } from './components/vender-dashboard/vender-dashboard-invoicing/vender-dashboard-invoicing.component';
-import { VenderDashboardReportingComponent } from './components/vender-dashboard/vender-dashboard-reporting/vender-dashboard-reporting.component';
-import { VenderDashboardSystemSettingsComponent } from './components/vender-dashboard/vender-dashboard-system-settings/vender-dashboard-system-settings.component';
-import { VenderUpcomingBookingsComponent } from './components/vender-dashboard/vender-upcoming-bookings/vender-upcoming-bookings.component';
-import { VenderDashboardCompletedBookingsComponent } from './components/vender-dashboard/vender-dashboard-completed-bookings/vender-dashboard-completed-bookings.component';
-import { VenderDashboardHeaderComponent } from './components/vender-dashboard/vender-dashboard-header/vender-dashboard-header.component';
+import { VendorDashboardWelcomeComponent } from './components/vendor-dashboard/vendor-dashboard-welcome/vendor-dashboard-welcome.component';
+import { VendorDashboardServicesComponent } from './components/vendor-dashboard/vendor-dashboard-services/vendor-dashboard-services.component';
+import { VendorDashboardManageBookingsComponent } from './components/vendor-dashboard/vendor-dashboard-manage-bookings/vendor-dashboard-manage-bookings.component';
+import { VendorDashboardMyStaffComponent } from './components/vendor-dashboard/vendor-dashboard-my-staff/vendor-dashboard-my-staff.component';
+import { VendorDashboardInvoicingComponent } from './components/vendor-dashboard/vendor-dashboard-invoicing/vendor-dashboard-invoicing.component';
+import { VendorDashboardReportingComponent } from './components/vendor-dashboard/vendor-dashboard-reporting/vendor-dashboard-reporting.component';
+import { VendorDashboardSystemSettingsComponent } from './components/vendor-dashboard/vendor-dashboard-system-settings/vendor-dashboard-system-settings.component';
+import { VendorUpcomingBookingsComponent } from './components/vendor-dashboard/vendor-upcoming-bookings/vendor-upcoming-bookings.component';
+import { VendorDashboardCompletedBookingsComponent } from './components/vendor-dashboard/vendor-dashboard-completed-bookings/vendor-dashboard-completed-bookings.component';
+import { VendorDashboardHeaderComponent } from './components/vendor-dashboard/vendor-dashboard-header/vendor-dashboard-header.component';
 
 
 const appRoutes: Routes = [
@@ -51,28 +51,28 @@ const appRoutes: Routes = [
     {path: 'home', component:HomeComponent},
     {path:'know-your-rights',component:KnowYourRightsComponent },
     {path:'contact-us',component:ContactUsComponent },
-    {path:'venders',component:VendorsComponent },
+    {path:'vendors',component:VendorsComponent },
     {
-        path:'vender-dashboard',
+        path:'vendor-dashboard',
         canActivate : [AuthGuard],
-        component:VenderDashboardComponent,
+        component:VendorDashboardComponent,
         children:[
-            {path: 'welcome', component: VenderDashboardWelcomeComponent },
-            {path: 'services', component: VenderDashboardServicesComponent },
+            {path: 'welcome', component: VendorDashboardWelcomeComponent },
+            {path: 'services', component: VendorDashboardServicesComponent },
             {
                 path: 'manage-bookings',
-                component: VenderDashboardManageBookingsComponent,
+                component: VendorDashboardManageBookingsComponent,
                 /*children:[
-                    {path: 'vender-upcoming-bookings', component:VenderUpcomingBookingsComponent}
+                    {path: 'vendor-upcoming-bookings', component:VendorUpcomingBookingsComponent}
                 ]*/
             },
-            {path: 'vender-upcoming-bookings', component:VenderUpcomingBookingsComponent},
-            {path: 'vender-completed-bookings', component:VenderDashboardCompletedBookingsComponent},
-            {path: 'my-staff', component: VenderDashboardMyStaffComponent },
-            {path: 'invoicing', component: VenderDashboardInvoicingComponent },
-            {path: 'reporting', component: VenderDashboardReportingComponent },
-            {path: 'system-settings', component: VenderDashboardSystemSettingsComponent },
-            {path: '', redirectTo: '/vender-dashboard/welcome', pathMatch:'full'}
+            {path: 'vendor-upcoming-bookings', component:VendorUpcomingBookingsComponent},
+            {path: 'vendor-completed-bookings', component:VendorDashboardCompletedBookingsComponent},
+            {path: 'my-staff', component: VendorDashboardMyStaffComponent },
+            {path: 'invoicing', component: VendorDashboardInvoicingComponent },
+            {path: 'reporting', component: VendorDashboardReportingComponent },
+            {path: 'system-settings', component: VendorDashboardSystemSettingsComponent },
+            {path: '', redirectTo: '/vendor-dashboard/welcome', pathMatch:'full'}
         ]
     },
     {path: '', redirectTo: '/home', pathMatch:'full'},
@@ -100,20 +100,20 @@ const appRoutes: Routes = [
     ContactUsComponent,
     VendorsComponent,
     VendorDetailFormComponent,
-    VenderServicesComponent,
+    VendorServicesComponent,
     FlightEnquiryComponent,
     PageNotFoundComponent,
-    VenderDashboardComponent,
-    VenderDashboardWelcomeComponent,
-    VenderDashboardServicesComponent,
-    VenderDashboardManageBookingsComponent,
-    VenderDashboardMyStaffComponent,
-    VenderDashboardInvoicingComponent,
-    VenderDashboardReportingComponent,
-    VenderDashboardSystemSettingsComponent,
-    VenderUpcomingBookingsComponent,
-    VenderDashboardCompletedBookingsComponent,
-    VenderDashboardHeaderComponent
+    VendorDashboardComponent,
+    VendorDashboardWelcomeComponent,
+    VendorDashboardServicesComponent,
+    VendorDashboardManageBookingsComponent,
+    VendorDashboardMyStaffComponent,
+    VendorDashboardInvoicingComponent,
+    VendorDashboardReportingComponent,
+    VendorDashboardSystemSettingsComponent,
+    VendorUpcomingBookingsComponent,
+    VendorDashboardCompletedBookingsComponent,
+    VendorDashboardHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -142,20 +142,20 @@ const appRoutes: Routes = [
     KnowYourRightsComponent,
     ContactUsComponent,
     VendorsComponent,
-    VenderServicesComponent,
+    VendorServicesComponent,
     FlightEnquiryComponent,
     PageNotFoundComponent,
-    VenderDashboardComponent,
-    VenderDashboardWelcomeComponent,
-    VenderDashboardServicesComponent,
-    VenderDashboardManageBookingsComponent,
-    VenderDashboardMyStaffComponent,
-    VenderDashboardInvoicingComponent,
-    VenderDashboardReportingComponent,
-    VenderDashboardSystemSettingsComponent,
-    VenderUpcomingBookingsComponent,
-    VenderDashboardCompletedBookingsComponent,
-    VenderDashboardHeaderComponent
+    VendorDashboardComponent,
+    VendorDashboardWelcomeComponent,
+    VendorDashboardServicesComponent,
+    VendorDashboardManageBookingsComponent,
+    VendorDashboardMyStaffComponent,
+    VendorDashboardInvoicingComponent,
+    VendorDashboardReportingComponent,
+    VendorDashboardSystemSettingsComponent,
+    VendorUpcomingBookingsComponent,
+    VendorDashboardCompletedBookingsComponent,
+    VendorDashboardHeaderComponent
     ]
 })
 export class AppModule { }

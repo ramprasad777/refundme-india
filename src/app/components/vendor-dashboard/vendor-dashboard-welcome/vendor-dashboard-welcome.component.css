@@ -1,0 +1,26 @@
+.tab-content{
+	padding:40px 0 0 0;
+}
+.orderPanelData [class^=col-]{
+	border:1px solid #ccc;
+	padding:30px;
+	border-collapse: collapse;
+	font-size:120%;
+}
+.orderPanelData .informationText{
+	text-transform: uppercase;
+}
+.orderPanelData .mainText{
+	color:#337ab7;
+	font-size:36px;
+}
+.vendorProfileBlock ul li{
+
+}
+.show_hide{
+	text-align:center;
+	display: block;
+	padding:10px;
+	color:#337ab7;
+	cursor: pointer;
+}
