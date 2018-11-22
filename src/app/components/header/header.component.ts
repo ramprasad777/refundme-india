@@ -2,7 +2,6 @@ import { Injectable, Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from  '@angular/http';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router, NavigationEnd } from '@angular/router';
-import { environment } from '../../../environments/environment';
 import { SharedService } from '../../shared.service';
 import { ToasterService } from '../../toaster.service';
 import { AuthGuard } from '../../auth.guard';
@@ -13,7 +12,6 @@ import { AuthGuard } from '../../auth.guard';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-	env = environment;
 	
 	signupForm: FormGroup;
 	post2:any;       
@@ -32,6 +30,8 @@ export class HeaderComponent implements OnInit {
     password:string = '';
     emailAlert:string = 'Email required.';
 	passwordAlert:string = 'Password required.';
+	isLoggedIn:boolean=false;
+	isVendorLoggedIn:boolean=false;
 
   	constructor(public sr: SharedService, private toasterService:ToasterService, private http: Http, private router: Router,private fb: FormBuilder) { 
 		this.loginForm = fb.group({
@@ -60,7 +60,7 @@ export class HeaderComponent implements OnInit {
 		});
 	}
 	
-	registration(data, service) {
+	registration(data) {
 		this.toasterService.Clear();
 		if (data.api_type == null) {
 			data.api_type = 'registration'
@@ -79,7 +79,7 @@ export class HeaderComponent implements OnInit {
 		});
 	}
 
-	login(data, service) {
+	login(data) {
 		this.toasterService.Info('Please wait...');
 		if (data.api_type == null) {
 			data.api_type = 'login'
@@ -94,9 +94,9 @@ export class HeaderComponent implements OnInit {
 				this.loginForm.reset();
 				document.getElementById('modalLogin').click();
 				localStorage.setItem('userToken', res_data.data.token);
-				this.env.isLoggedIn = true;
+				this.isLoggedIn = true;
 				if (localStorage.getItem('userToken') != null) {
-					this.env.isLoggedIn = true;
+					this.isLoggedIn = true;
 				}
 			}
 
@@ -105,7 +105,7 @@ export class HeaderComponent implements OnInit {
 
 	logout() {
 		localStorage.removeItem('userToken');
-		this.env.isLoggedIn = true;
+		this.isLoggedIn = true;
 		this.router.navigate(['/']);
 	}
 

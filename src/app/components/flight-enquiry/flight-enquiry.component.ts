@@ -47,7 +47,7 @@ export class FlightEnquiryComponent implements OnInit {
 		});
 	}
 
-	flightEnquiry(data, service) {
+	flightEnquiry(data) {
 		this.toasterService.Info('Please wait...');
 		if (data.api_type == null) {
 			data.api_type = 'flightEnquiryForm'

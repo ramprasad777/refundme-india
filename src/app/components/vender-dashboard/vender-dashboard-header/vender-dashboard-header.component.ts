@@ -1,6 +1,5 @@
 import { Component, OnInit, Renderer } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-vender-dashboard-header',
@@ -8,7 +7,10 @@ import { environment } from '../../../../environments/environment';
   styleUrls: ['./vender-dashboard-header.component.css']
 })
 export class VenderDashboardHeaderComponent implements OnInit {
-  env = environment;
+  
+  isVendorLoggedIn:boolean=false;
+  isLoggedIn:boolean=false;
+
   constructor(private renderer: Renderer, public router: Router) { }
 
   ngOnInit() {
@@ -16,7 +18,7 @@ export class VenderDashboardHeaderComponent implements OnInit {
 
   vendorlogout() {
     localStorage.removeItem('vendorToken');
-    this.env.isVendorLoggedIn = false;
+    this.isVendorLoggedIn = false;
     this.renderer.setElementClass(document.body, 'vendorLoggedIn', false);
     this.router.navigate(['/']);
 

@@ -1,4 +1,4 @@
-<nav *ngIf="!env.isVendorLoggedIn" class="navbar navbar-fixed-top mainNavigation" role="navigation">
+<nav class="navbar navbar-fixed-top mainNavigation" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" id="ChangeToggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -24,11 +24,11 @@
         <li class="panel loginDropdown" [routerLinkActive]="['active']">
           <a class="toggle accordion-toggle" data-target="#loginToggle" data-toggle="collapse" data-parent="#side">Login <i class="fa fa-caret-down"></i></a>
           <ul id="loginToggle" class="inner collapse nav dropdown-menu">
-            <li *ngIf="!env.isLoggedIn" [routerLinkActive]="['active']"><a href="#" id="loginBtn" data-toggle="modal" data-target="#modalLogin">User</a></li>
-            <li *ngIf="!env.isVendorLoggedIn" [routerLinkActive]="['active']"><a routerLink="/venders">Vender</a></li>
-            <li *ngIf="env.isVendorLoggedIn" [routerLinkActive]="['active']"><a routerLink="/vender-dashboard/welcome">Vender</a></li>
-            <li *ngIf="env.isLoggedIn"  [routerLinkActive]="['active']"><a routerLink="/myaccount">My Account</a></li>
-            <li *ngIf="env.isLoggedIn"  [routerLinkActive]="['active']"><a (click)="logout()" href="#">Logout</a></li>
+            <li *ngIf="!isLoggedIn" [routerLinkActive]="['active']"><a href="#" id="loginBtn" data-toggle="modal" data-target="#modalLogin">User</a></li>
+            <li *ngIf="!isVendorLoggedIn" [routerLinkActive]="['active']"><a routerLink="/venders">Vender</a></li>
+            <li *ngIf="isVendorLoggedIn" [routerLinkActive]="['active']"><a routerLink="/vender-dashboard/welcome">Vender</a></li>
+            <li *ngIf="isLoggedIn"  [routerLinkActive]="['active']"><a routerLink="/myaccount">My Account</a></li>
+            <li *ngIf="isLoggedIn"  [routerLinkActive]="['active']"><a (click)="logout()" href="#">Logout</a></li>
           </ul>
         </li>
         <li><a href="#search" id="searchIcon"><i class="fa fa-search"></i></a></li>

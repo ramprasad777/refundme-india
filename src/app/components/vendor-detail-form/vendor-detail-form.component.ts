@@ -1,7 +1,6 @@
 import { Injectable, Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from  '@angular/http';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { environment } from '../../../environments/environment';
 import { Router, NavigationEnd } from '@angular/router';
 import { SharedService } from '../../shared.service';
 import { ToasterService } from '../../toaster.service';
@@ -14,7 +13,8 @@ import { AuthGuard } from '../../auth.guard';
 })
 export class VendorDetailFormComponent implements OnInit {
 
-	env = environment;
+	isVendorLoggedIn:boolean=false;
+	isLoggedIn:boolean=false;
 
   	venderLoginForm: FormGroup;
   	post:any;       
@@ -34,7 +34,7 @@ export class VendorDetailFormComponent implements OnInit {
 		});
 	}
 
-	venderLogin(data, service) {
+	venderLogin(data) {
 		
 		this.toasterService.Info('Please wait...');
 		if (data.api_type == null) {
@@ -49,9 +49,9 @@ export class VendorDetailFormComponent implements OnInit {
 				this.toasterService.Success(res_data.message);
 				this.venderLoginForm.reset();
 				localStorage.setItem('vendorToken', res_data.data.token);
-				this.env.isVendorLoggedIn = true;
+				this.isVendorLoggedIn = true;
 				if (localStorage.getItem('vendorToken') != null) {
-					this.env.isVendorLoggedIn = true;
+					this.isVendorLoggedIn = true;
 					this.router.navigate(['/vender-dashboard/welcome']);
 				}
 			}

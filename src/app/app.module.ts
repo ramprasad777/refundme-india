@@ -21,7 +21,6 @@ import { SubscribeNewsletterComponent } from './components/subscribe-newsletter/
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { PressReleaseComponent } from './components/press-release/press-release.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
-import { LoginSignupComponent } from './components/login-signup/login-signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { KnowYourRightsComponent } from './components/know-your-rights/know-your-rights.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -50,7 +49,6 @@ import { VenderDashboardHeaderComponent } from './components/vender-dashboard/ve
 const appRoutes: Routes = [
 
     {path: 'home', component:HomeComponent},
-    {path:'Login-Signup',component:LoginSignupComponent },
     {path:'know-your-rights',component:KnowYourRightsComponent },
     {path:'contact-us',component:ContactUsComponent },
     {path:'venders',component:VendorsComponent },
@@ -98,7 +96,6 @@ const appRoutes: Routes = [
     TestimonialComponent,
     PressReleaseComponent,
     MainFooterComponent,
-    LoginSignupComponent,
     KnowYourRightsComponent,
     ContactUsComponent,
     VendorsComponent,
@@ -142,7 +139,6 @@ const appRoutes: Routes = [
     TestimonialComponent,
     PressReleaseComponent,
     MainFooterComponent,
-    LoginSignupComponent,
     KnowYourRightsComponent,
     ContactUsComponent,
     VendorsComponent,
