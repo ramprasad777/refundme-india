@@ -323,11 +323,12 @@ p {
   text-align: left;
   color: #fff;
   background: rgba(195, 11, 11, 0.6);
-  position: relative;
+  position: absolute;
   font-size: 90%;
-  bottom: 2px;
+  bottom: 0;
   border-radius: 0;
-  height: 0px; }
+  height: 0px;
+  width: 100%; }
 
 .enquiryForm .btn-default {
   background-color: transparent; }
