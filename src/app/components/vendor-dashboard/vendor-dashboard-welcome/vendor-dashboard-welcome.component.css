@@ -24,3 +24,11 @@
 	color:#337ab7;
 	cursor: pointer;
 }
+.userDetailPanel{
+	background:#fff;
+	padding:20px;
+	border:1px solid #ccc;
+	margin:-20px -15px 0;
+	border-right:none;
+	border-left:none;
+}

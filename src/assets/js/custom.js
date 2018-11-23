@@ -8,9 +8,8 @@ $(function () {
          $('.donatationMessageHome').css({'height':ourObjectsMessageSection});
     }
     else {
-       $('body').css({'padding-top':headerHeight+40});
+       $('body').css({'padding-top':headerHeight+80});
     }
-	
 	//device menu icon change
 	$('#ChangeToggle').click(function() {
 		$('#navbar-hamburger').toggleClass('hidden');

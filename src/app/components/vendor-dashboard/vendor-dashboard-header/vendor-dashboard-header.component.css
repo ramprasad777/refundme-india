@@ -93,7 +93,7 @@
 	  	transform: translateY(-50%);
 	}
 	.vendorDashboardRightNav li:first-child{
-		margin-right:20px;
+		margin-right:0;
 	}
 	.vendorDashboardRightNav > li > a{
 		background-color:none;
@@ -101,10 +101,10 @@
 	}
 	.vendorDashboardRightNav > li > a:hover, .vendorDashboardRightNav > li > a:focus, .vendorDashboardRightNav > li > a.active{
 		background-color: none;
-		color:#54677A!important;
+		color:#54677A;
 	}
-  .venderDashboardRightNav > li.active a:hover, .venderDashboardRightNav > li a:focus{
-    color:#fff!important;
+  .venderDashboardRightNav > li.active > a:hover, .venderDashboardRightNav > li a:focus{
+    color:#fff;
   }
 }
 

@@ -120,12 +120,20 @@
     color:#337ab7;
 }
 .loginDropdown li a:after{
-    height:1px;
     content: '';
     display: block;
-    margin-top: 10px;
     width: 100%;
-    background: #10afd4;
+    /*height:1px;
+    margin-top: 10px;
+    background: #10afd4;*/  
+}
+.loginDropdown ul li a:after{
+    height:0;
+    background:none;
+    margin-top:0;
+}
+.mainNavigation .container:after, #navbar:after{
+    clear:inherit;
 }
 /*Login signup modal*/
 .modal-lg{
