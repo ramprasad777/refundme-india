@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^6.1.10",
     "@angular/router": "^6.1.10",
     "browser-sync": "^2.26.3",
+    "chart.js": "^2.7.3",
     "core-js": "^2.5.4",
     "gulp-clean-css": "^3.10.0",
     "gulp-if": "^2.0.2",
@@ -28,6 +29,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
     "gulp-useref": "^3.1.5",
+    "ng2-charts": "^1.6.0",
     "rxjs": "~6.2.0",
     "rxjs-compat": "^6.3.3",
     "zone.js": "~0.8.26"

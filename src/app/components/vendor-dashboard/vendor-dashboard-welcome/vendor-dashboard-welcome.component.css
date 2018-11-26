@@ -1,6 +1,17 @@
 .tab-content{
 	padding:40px 0 0 0;
 }
+.tab-content a{
+	display: block;
+	text-decoration: none;
+	padding:30px;
+}
+.hasAnchor [class^=col-]{
+	padding:0!important;
+}
+.tab-content a:hover{
+	background:rgba(232,232,232,.4);
+}
 .orderPanelData [class^=col-]{
 	border:1px solid #ccc;
 	padding:30px;
@@ -31,4 +42,7 @@
 	margin:-20px -15px 0;
 	border-right:none;
 	border-left:none;
+}
+.graphContainer{
+	position: relative;
 }

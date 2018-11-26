@@ -29,39 +29,49 @@
 						</ul>
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane orderPanelData fade in active" id="today">
-								<div class="card-footer">
+								<div class="card-footer hasAnchor">
 					                <div class="row">
-					                    <div class="col-xs-4 text-xs-center">
-					                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-					                        <h2 class="block font-weight-normal mainText">18</h2>
-					                        <span class="text-muted">no change</span>                        
+					                    <div class="col-xs-12 col-sm-4 text-xs-center">
+					                    	<a href="#completedBookings" data-toggle="tab">
+						                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+						                        <h2 class="block font-weight-normal mainText">18</h2>
+						                        <span class="text-muted">no change</span>
+						                    </a>
 					                    </div>
-					                    <div class="col-xs-4 text-xs-center">
-					                    	<a href="#trendingDelieveredOrders" data-toggle="tab">
+					                    <div class="col-xs-12 col-sm-4 text-xs-center">
+					                    	<a href="#upcomingBookings" data-toggle="tab">
 					                        	<span class="text-muted informationText">Upcoming Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
 					                        	<h2 class="block font-weight-normal mainText">12</h2>
 					                        	<span class="text-muted">no change</span>
 					                        </a>                     
 					                    </div>
-					                    <div class="col-xs-4 text-xs-center">
-					                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-					                        <h2 class="block font-weight-normal mainText">4</h2>
-					                        <span class="text-muted">no change</span>                        
+					                    <div class="col-xs-12 col-sm-4 text-xs-center">
+					                    	<a href="#cancelledBookings" data-toggle="tab">
+						                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+						                        <h2 class="block font-weight-normal mainText">4</h2>
+						                        <span class="text-muted">no change</span>
+						                    </a>
 					                    </div>
-					                    <div class="col-xs-4 text-xs-center">
-					                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 5000</h2>
-					                        <span class="text-muted">no change</span>                        
+					                    <div class="col-xs-12 col-sm-4 text-xs-center">
+					                    	<a href="#totalRevenue" data-toggle="tab">
+						                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+						                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 5000</h2>
+						                        <span class="text-muted">no change</span>
+						                    </a>
 					                    </div>
-					                    <div class="col-xs-4 text-xs-center">
-					                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-					                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 300</h2>
-					                        <span class="text-muted">no change</span>                        
+					                    <div class="col-xs-12 col-sm-4 text-xs-center">
+					                    	<a href="#revenueLoss" data-toggle="tab">
+						                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+						                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 300</h2>
+						                        <span class="text-muted">no change</span>
+						                    </a>
 					                    </div>
-					                    <div class="col-xs-4 text-xs-center">
-					                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-					                        <h2 class="block font-weight-normal mainText">0</h2>
-					                        <span class="text-muted">no change</span>                        
+					                    <div class="col-xs-12 col-sm-4 text-xs-center">
+					                    	<a href="#" data-toggle="tab">
+						                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
+						                        <h2 class="block font-weight-normal mainText">0</h2>
+						                        <span class="text-muted">no change</span>
+						                    </a>
 					                    </div>
 					                </div>
 					            </div>
@@ -182,91 +192,57 @@
 		<div class="col-xs-12 col-md-4 trendingSummary">
 			<!--Trends Graphs-->
 			<h3>Stats</h3>
-			<div class="container-fluid">
-				<div class="">
-					<div role="tabpanel" class="tab-pane orderPanelData fade in active" id="trendingRevenue">
-		                <div class="row">
-		                    <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-bar-chart"></div>
-                            </div>
-		                </div>
+			<div class="container-fluid graphContainer">
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane orderPanelData fade in active" id="completedBookings">
+					    <canvas baseChart
+					            [datasets]="barChartData"
+					            [labels]="barChartLabels"
+					            [options]="barChartOptions"
+					            [legend]="barChartLegend"
+					            [chartType]="barChartType"
+					            (chartHover)="chartHovered($event)"
+					            (chartClick)="chartClicked($event)">
+					    </canvas>
+						<!--<button (click)="randomize()">Update</button>-->
 					</div>
-					<div role="tabpanel" class="tab-pane orderPanelData fade" id="trendingDelieveredOrders">
-						<div class="flot-chart">
-                            <div class="flot-chart-content" id="flot-pie-chart"></div>
-                        </div>
+					<div role="tabpanel" class="tab-pane orderPanelData fade" id="upcomingBookings">
+						<canvas baseChart
+								[data]="pieChartData"
+								[labels]="pieChartLabels"
+								[chartType]="pieChartType"
+								(chartHover)="chartHovered($event)"
+								(chartClick)="chartClicked($event)">
+						</canvas>
 					</div>
-					<div role="tabpanel" class="tab-pane orderPanelData fade" id="trendingRevenueLoss">
-						<div class="card-footer">
-			                <div class="row">
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">58</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Upcoming Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">22</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">10</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 50000</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 3000</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                </div>
-			            </div>
+					<div role="tabpanel" class="tab-pane orderPanelData fade" id="cancelledBookings">
+						<canvas baseChart
+								[data]="lineChartData"
+								[labels]="lineChartLabels"
+								[options]="lineChartOptions"
+								[chartType]="lineChartType"
+								(chartHover)="chartHovered($event)"
+								(chartClick)="chartClicked($event)">
+						</canvas>
 					</div>
-					<div role="tabpanel" class="tab-pane orderPanelData fade" id="trendingCancelledOrders">
-						<div class="card-footer">
-			                <div class="row">
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Completed Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">180</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Upcoming Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">120</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Cancelled Bookings <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">40</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Total Revenue <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 50000</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Revenue Loss <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText"><i class="fa fa-rupee"></i> 3000</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                    <div class="col-xs-4 text-xs-center">
-			                        <span class="text-muted informationText">Lorem ipsum <i class="fa fa-info-circle" data-toggle="tooltip" title="Some tooltip information"></i></span>
-			                        <h2 class="block font-weight-normal mainText">0</h2>
-			                        <span class="text-muted">no change</span>                        
-			                    </div>
-			                </div>
-			            </div>
+					<div role="tabpanel" class="tab-pane orderPanelData fade" id="totalRevenue">
+						<canvas baseChart
+								[data]="lineChartData"
+								[labels]="lineChartLabels"
+								[options]="lineChartOptions"
+								[chartType]="lineChartType"
+								(chartHover)="chartHovered($event)"
+								(chartClick)="chartClicked($event)">
+						</canvas>
+					</div>
+					<div role="tabpanel" class="tab-pane orderPanelData fade" id="revenueLoss">
+						<canvas baseChart
+								[data]="pieChartData"
+								[labels]="pieChartLabels"
+								[chartType]="pieChartType"
+								(chartHover)="chartHovered($event)"
+								(chartClick)="chartClicked($event)">
+						</canvas>
 					</div>
 				</div>
 			</div>
