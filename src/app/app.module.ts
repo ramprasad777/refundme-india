@@ -45,6 +45,7 @@ import { VendorDashboardSystemSettingsComponent } from './components/vendor-dash
 import { VendorUpcomingBookingsComponent } from './components/vendor-dashboard/vendor-upcoming-bookings/vendor-upcoming-bookings.component';
 import { VendorDashboardCompletedBookingsComponent } from './components/vendor-dashboard/vendor-dashboard-completed-bookings/vendor-dashboard-completed-bookings.component';
 import { VendorDashboardHeaderComponent } from './components/vendor-dashboard/vendor-dashboard-header/vendor-dashboard-header.component';
+import { VendorDashboardUserDetailComponent } from './components/vendor-dashboard/vendor-dashboard-user-detail/vendor-dashboard-user-detail.component';
 
 
 const appRoutes: Routes = [
@@ -73,6 +74,7 @@ const appRoutes: Routes = [
             {path: 'invoicing', component: VendorDashboardInvoicingComponent },
             {path: 'reporting', component: VendorDashboardReportingComponent },
             {path: 'system-settings', component: VendorDashboardSystemSettingsComponent },
+            {path: 'user-detail', component: VendorDashboardUserDetailComponent },
             {path: '', redirectTo: '/vendor-dashboard/welcome', pathMatch:'full'}
         ]
     },
@@ -114,7 +116,8 @@ const appRoutes: Routes = [
     VendorDashboardSystemSettingsComponent,
     VendorUpcomingBookingsComponent,
     VendorDashboardCompletedBookingsComponent,
-    VendorDashboardHeaderComponent
+    VendorDashboardHeaderComponent,
+    VendorDashboardUserDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -157,7 +160,8 @@ const appRoutes: Routes = [
     VendorDashboardSystemSettingsComponent,
     VendorUpcomingBookingsComponent,
     VendorDashboardCompletedBookingsComponent,
-    VendorDashboardHeaderComponent
+    VendorDashboardHeaderComponent,
+    VendorDashboardUserDetailComponent
     ]
 })
 export class AppModule { }
