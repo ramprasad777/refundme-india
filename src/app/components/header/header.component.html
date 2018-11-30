@@ -22,8 +22,8 @@
         <li [routerLinkActive]="['active']"><a routerLink="/mission">Blog</a></li>
         <li [routerLinkActive]="['active']"><a routerLink="/contact-us">Contact us</a></li>
         <li class="panel loginDropdown" [routerLinkActive]="['active']">
-          <a class="toggle accordion-toggle" data-target="#loginToggle" data-toggle="collapse" data-parent="#side">Login <i class="fa fa-caret-down"></i></a>
-          <ul id="loginToggle" class="inner collapse nav dropdown-menu">
+          <a class="toggle accordion-toggle" data-target="#loginToggle" data-toggle="collapse" data-parent="#side"  ng-click="toggleMenu($event);">Login <i class="fa fa-caret-down"></i></a>
+          <ul id="loginToggle" class="inner collapse nav dropdown-menu" ng-show="menuOpened">
             <li *ngIf="!isLoggedIn" [routerLinkActive]="['active']"><a href="#" id="loginBtn" data-toggle="modal" data-target="#modalLogin">User</a></li>
             <li *ngIf="!isVendorLoggedIn" [routerLinkActive]="['active']"><a routerLink="/vendors">Vendor</a></li>
             <li *ngIf="isVendorLoggedIn" [routerLinkActive]="['active']"><a routerLink="/vendor-dashboard/welcome">Vendor</a></li>
